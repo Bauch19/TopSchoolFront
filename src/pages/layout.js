@@ -1,16 +1,15 @@
 import { Inter, Poppins } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ["latin"],
   display: 'swap',
   variable: '--font-poppins',
   weight: ['100','200','300','400','500','600','700','800','900'],
 });
 
-export const metadata = {
+const metadata = {
   title: "TopSchool",
   description: "TopSchool primer medio de comunicación escolar",
 };
@@ -18,6 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
       <body className={`${poppins.className}`}>{children}</body>
     </html>
   );
