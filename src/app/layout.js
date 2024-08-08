@@ -14,14 +14,18 @@ const metadata = {
   description: "TopSchool primer medio de comunicación escolar",
 };
 
+import "./globals.css";
+import NestedLayout from "@/components/nested-layout";
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </head>
-      <body className={`${poppins.className}`}>{children}</body>
+    <html lang="en">
+      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <body className={poppins.className}>
+        <NestedLayout>
+          {children}
+        </NestedLayout>
+      </body>
     </html>
   );
 }

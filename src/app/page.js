@@ -1,11 +1,14 @@
-'use client';
+/* eslint-disable @next/next/no-img-element */
+"use client";
+
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 
 export default function Home() {
-
+  
   return (
+    <>
     <main className="min-h-screen w-full relative">
       <BackGalaxy />
       <section className="absolute top-0 z-[5] bg-transparent">
@@ -31,5 +34,6 @@ export default function Home() {
 
       </section>
     </main>
+    </>
   );
 }
