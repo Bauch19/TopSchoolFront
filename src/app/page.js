@@ -9,9 +9,9 @@ export default function Home() {
   
   return (
     <>
-    <main className="min-h-screen w-full relative">
+    <main className="relative z-[0]">
       <BackGalaxy />
-      <section className="absolute top-0 z-[5] bg-transparent">
+      <section className="absolute top-0 !z-[3] bg-transparent">
         <div className="w-full h-full flex flex-col justify-start items-center py-10 bg-transparent">
           <Image 
             src={'/titulo-full.png'}
@@ -26,12 +26,13 @@ export default function Home() {
             src={'/boys.png'}
             width={960}
             height={540}
-            className="w-1/4 h-auto mt-10"
+            className="w-1/4 h-auto mt-10 brightness-75 z-0"
           />
         </div>
       </section>
-      <section>
-
+      
+      <section className="bg-black !z-[5]">
+        
       </section>
     </main>
     </>
