@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { motion, AnimatePresence } from "framer-motion";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 
 export default function Home() {
@@ -30,7 +31,13 @@ export default function Home() {
             height={540}
             className="w-1/4 h-auto mt-10 z-0 mask-img-gradient"
           />
-          <button className="font-bold uppercase tracking-[5px] bg-gray-900 bg-opacity-35 px-2 pl-3 py-1 rounded-full border border-white text-sm backdrop-blur-xl text-white mt-[-5%] z-[1]">Saber más</button>
+          <motion.button 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="font-bold uppercase tracking-[5px] bg-gray-900 bg-opacity-35 px-2 pl-3 py-1 rounded-full border border-white text-sm backdrop-blur-xl text-white mt-[-5%] z-[1]"
+          >
+            Saber más
+          </motion.button>
         </div>
       </section>
       <section className="bg-black !z-[5]">

@@ -8,18 +8,42 @@ import 'swiper/css/pagination';
 
 import Image from 'next/image';
 
+import { useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 export default function SwiperArticles(){
     const arrayAux = [0,1];
+    const sliderRef = useRef(null);
+
+    const handlePrev = () => {
+        if(sliderRef?.current){
+            sliderRef?.current?.swiper?.slidePrev();
+        }
+    }
+
+    const handleNext = () => {
+        if(sliderRef?.current){
+            sliderRef?.current?.swiper?.slideNext();
+        }
+    }
+
     return(
+    <>
+    <Control 
+        className={'-left-10'}
+        direction='left'
+        onClick={() => handlePrev()}
+    />
+    <Control 
+        className={'-right-10'}
+        direction='right'
+        onClick={() => handleNext()}
+    />
     <Swiper
+        ref={sliderRef}
         spaceBetween={50}
         slidesPerView={4}
-        navigation={true} 
-        modules={[Navigation,Pagination]} 
-        pagination={{
-            dynamicBullets: true,
-            clickable: true,
-        }}
+        navigation={false}
         loop
         className='h-fit'
     >
@@ -35,8 +59,9 @@ export default function SwiperArticles(){
                         className='object-cover w-full h-full'
                     />
                 </div>
-                <span className='text-white uppercase font-bold mb-2'>Rinocerontes</span>
-                <p className='uppercase'>Vive la verdadera experiencia en africam safari</p>
+                <div className='h-10'></div>
+                <span className='text-white uppercase font-bold py-3'>Rinocerontes</span>
+                <p className='uppercase text-xs'>Vive la verdadera experiencia en africam safari</p>
             </SwiperSlide>
             <SwiperSlide key={'item-2'+index} className='text-white h-fit w-full'>
                 <div className='containerTop overflow-hidden'>
@@ -48,8 +73,9 @@ export default function SwiperArticles(){
                         className='object-cover w-full h-full'
                     />
                 </div>
-                <span className='text-white uppercase font-bold mb-2'>Back to School</span>
-                <p className='uppercase'>Office Depot los mejores descuentos</p>
+                <div className='h-10'></div>
+                <span className='text-white uppercase font-bold py-3'>Back to School</span>
+                <p className='uppercase text-xs'>Office Depot los mejores descuentos</p>
             </SwiperSlide>
             <SwiperSlide key={'item-3'+index} className='text-white h-fit w-full'>
                 <div className='containerTop overflow-hidden'>
@@ -61,8 +87,9 @@ export default function SwiperArticles(){
                         className='object-cover w-full h-full'
                     />
                 </div>
-                <span className='text-white uppercase font-bold mb-2'>Entrevista con ...</span>
-                <p className='uppercase'>Cristian Carabias libre como el viento</p>
+                <div className='h-10'></div>
+                <span className='text-white uppercase font-bold py-3'>Entrevista con ...</span>
+                <p className='uppercase text-xs'>Cristian Carabias libre como el viento</p>
             </SwiperSlide>
             <SwiperSlide key={'item-4'+index} className='text-white h-fit w-full'>
                 <div className='containerTop overflow-hidden'>
@@ -74,11 +101,35 @@ export default function SwiperArticles(){
                         className='object-cover w-full h-full'
                     />
                 </div>
-                <span className='text-white uppercase font-bold mb-2'>Tecnología</span>
-                <p className='uppercase'>De lo analogo a lo digital, la singularidad</p>
+                <div className='h-10'></div>
+                <span className='text-white uppercase font-bold py-3'>Tecnología</span>
+                <p className='uppercase text-xs'>De lo analogo a lo digital, la singularidad</p>
             </SwiperSlide>
             </>
         ))}
     </Swiper>
+    </>
+    )
+};
+
+function Control({ direction = 'left', className, ...res }){
+    return(
+        <AnimatePresence>
+            <motion.button 
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.85 }}
+                className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center z-10 bg-gray-500 bg-opacity-50 backdrop-blur-lg ${className}`} {...res}
+            >
+                {direction == 'left' ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" className='mr-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FFF"} fill={"none"}>
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" className='ml-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FFF"} fill={"none"}>
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                )}
+            </motion.button>
+        </AnimatePresence>
     )
 }

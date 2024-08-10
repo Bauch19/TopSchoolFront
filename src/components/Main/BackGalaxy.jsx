@@ -45,13 +45,15 @@ export default function BackGalaxy(){
             <div id="stars"></div>
             <div id="stars2"></div>
         </div>
-        <div className="bg-black-transparent w-full h-[33vh] z-[2]">
-            <div className="w-full h-[33vh] bg-gradient-to-t from-[#000] flex justify-center items-center">
-                <span className="text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span>
+        <div className="bg-black-transparent w-full h-[35vh] z-[2]">
+            <div className="w-full h-[35vh] bg-gradient-to-t from-[#000] flex justify-center items-center">
             </div>
         </div>
-        <div className="z-[2] max-w-[1000px] mx-auto">
-            <SwiperArticles />
+        <div className="z-[2] w-full max-w-[1000px] mx-auto -mt-[15%] relative flex flex-col justify-center items-center">
+            <span className="w-full text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span>
+            <div className="w-full max-w-[1000px] mx-auto mt-10 relative">
+                <SwiperArticles />
+            </div>
         </div>
     </div>
     )
