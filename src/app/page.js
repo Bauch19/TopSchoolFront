@@ -10,7 +10,7 @@ export default function Home() {
   
   return (
     <>
-    <main className="relative z-[0]">
+    <main className="relative z-[0] w-[100vw] overflow-x-hidden">
       <BackGalaxy />
       <section className="absolute top-0 !z-[3] bg-transparent">
         <div className="w-full h-full flex flex-col justify-start items-center py-10 bg-transparent">
