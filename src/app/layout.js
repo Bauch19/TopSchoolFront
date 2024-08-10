@@ -20,7 +20,7 @@ import NestedLayout from "@/components/nested-layout";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="shortcut icon" href="/vercel.svg" />
       <body className={poppins.className}>
         <NestedLayout>
           {children}
