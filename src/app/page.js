@@ -88,6 +88,21 @@ export default function Home() {
           <SwiperTop />
         </div>
       </section>
+      <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative flex flex-col justify-start items-center">
+        <Image 
+          src={'/titulo-full.png'}
+          alt="titulo"
+          width={960}
+          height={540}
+          className="w-1/3 h-auto z-[1]"
+        />
+        <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center">
+          DONDE ENCONTRAR LA<br /> MEJOR OFERTA EDUCATIVA
+        </p>
+        <Button className={'mt-7'}>
+          Suscribete
+        </Button>
+      </section>
     </main>
     </>
   );
