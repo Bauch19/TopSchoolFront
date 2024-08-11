@@ -6,7 +6,7 @@ import "./style.css";
 
 export default function BackGalaxy(){
     return(
-    <div className="w-full h-full relative flex flex-col justify-center ">
+    <div className="w-full h-full relative flex flex-col justify-center bg-black">
         <motion.div
             inital={{ translateX: '200vw' }}
             animate={{ translateX: '-200vw' }}
@@ -51,9 +51,9 @@ export default function BackGalaxy(){
             <div className="w-full h-full bg-gradient-to-t from-[#000] flex justify-center items-center">
             </div>
         </div>
-        <div className="z-[2] w-full max-w-[1000px] mx-auto -mt-[10%] relative flex flex-col justify-center items-center">
+        <div className="z-[2] w-full max-w-[1000px] mx-auto -mt-[14%] relative flex flex-col justify-center items-center">
             <span className="w-full text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span>
-            <div className="w-full max-w-[1000px] mx-auto mt-14 relative">
+            <div className="w-full max-w-[1000px] mx-auto mt-20 relative">
                 <SwiperArticles />
             </div>
         </div>

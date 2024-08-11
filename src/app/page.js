@@ -5,12 +5,15 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
+const Button = dynamic(() => import('@/app/components/buttons/Button'));
+const People = dynamic(() => import('@/app/components/presentation/People'));
+const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
 
 export default function Home() {
   
   return (
     <>
-    <main className="relative z-[0] w-[100vw] overflow-x-hidden">
+    <main className="relative z-[0] w-[100vw] overflow-x-hidden bg-white">
       <BackGalaxy />
       <section className="absolute top-0 !z-[3] bg-transparent">
         <div className="w-full h-full flex flex-col justify-start items-center py-5 bg-transparent">
@@ -29,26 +32,61 @@ export default function Home() {
             alt="principal"
             width={960}
             height={540}
-            className="w-1/2 h-auto -mt-[15%] z-0"
+            className="w-1/2 h-auto -mt-[15%] z-0 mask-img-gradient"
           />
-          <motion.button 
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="font-bold uppercase tracking-[5px] bg-[#000] bg-opacity-35 px-4 pl-5 py-1 rounded-full border border-white text-xs backdrop-blur-xl text-white mt-[-10%] z-[1]"
-          >
+          <Button className={'mt-[-10%] z-[1]'}>
             Saber más
-          </motion.button>
+          </Button>
         </div>
       </section>
-      <section className="bg-black !z-[5] bg-[url(/bg-news.jpg)] bg-center bg-cover bg-no-repeat mt-[15%] relative flex flex-col justify-center items-center">
+      <div className="w-full h-[25vh] bg-black"></div>
+      <section className="bg-black !z-[5] bg-[url(/bg-news.jpg)] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
         <Image 
           src={'/banners/banner-1.jpg'}
           width={2000}
           height={538}
-          className="absolute -top-[100px] w-[1000px] h-[200px] object-cover"
+          className="absolute -top-[75px] w-[1000px] h-[150px] object-cover"
+        />
+        <Image 
+          src={'/titulo-full.png'}
+          alt="titulo"
+          width={960}
+          height={540}
+          className="w-1/2 h-auto z-[1] mt-[80px]"
+        />
+        <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center">Las mejores opiniones<br /> educativas del país</p>
+        <Button className={'mt-7'}>
+          Suscribete
+        </Button>
+        <div className="w-full max-w-[1320px] flex justify-center items-center">
+          <People 
+            src={'/people/persona-1.png'}
+            name={'Dana'}
+            lastName={'Stevens'}
+          />
+          <People 
+            src={'/people/persona-2.png'}
+            name={'Rebeca'}
+            lastName={'Hadid'}
+          />
+          <People 
+            src={'/people/persona-3.png'}
+            name={'Jordi'}
+            lastName={'Soler'}
+          />
+        </div>
+        <Image 
+          src={'/banners/banner-1.jpg'}
+          width={2000}
+          height={538}
+          className="absolute -bottom-[75px] w-[1000px] h-[150px] object-cover"
         />
       </section>
-      <section className="bg-white"></section>
+      <section className="bg-white flex flex-col justify-center items-center">
+        <div className="w-full max-w-[1000px] mx-auto mt-20 relative">
+          <SwiperTop />
+        </div>
+      </section>
     </main>
     </>
   );
