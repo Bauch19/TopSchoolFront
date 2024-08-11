@@ -83,6 +83,7 @@ export default function Home() {
         />
       </section>
       <section className="bg-white flex flex-col justify-center items-center">
+        <h3 className="uppercase text-blue-500 font-semibold text-[24px] tracking-[5px] mt-10">Lo más top</h3>
         <div className="w-full max-w-[1000px] mx-auto mt-20 relative">
           <SwiperTop />
         </div>

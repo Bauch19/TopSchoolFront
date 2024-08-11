@@ -30,12 +30,12 @@ export default function SwiperTop(){
     return(
     <>
     <Control 
-        className={'-left-10'}
+        className={'-left-12'}
         direction='left'
         onClick={() => handlePrev()}
     />
     <Control 
-        className={'-right-10'}
+        className={'-right-12'}
         direction='right'
         onClick={() => handleNext()}
     />
@@ -50,60 +50,36 @@ export default function SwiperTop(){
         {arrayAux?.map((item, index) => (
             <>
             <SwiperSlide key={'item-1'+index} className='text-blue-500 h-fit w-full'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/ARTI-02.png'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-black uppercase font-bold py-3'>Rinocerontes</span>
-                <p className='uppercase text-xs'>Vive la verdadera experiencia en africam safari</p>
+                <Items 
+                    src={'/articulos/top-1.jpg'}
+                    alt='articulo'
+                    title={'RAFA MARQUEZ'}
+                    description={'EL LEGADO DE UN GRANDE EN MÉXICO'}
+                />
             </SwiperSlide>
             <SwiperSlide key={'item-2'+index} className='text-blue-500 h-fit w-full'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/ARTI-03.png'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-black uppercase font-bold py-3'>Back to School</span>
-                <p className='uppercase text-xs'>Office Depot los mejores descuentos</p>
+                <Items 
+                    src={'/articulos/top-2.jpg'}
+                    alt='articulo'
+                    title={'PALACIO DE HIERRO'}
+                    description={'LOS MEJORES RECUERDOS SON LAS AVENTURAS'}
+                />
             </SwiperSlide>
             <SwiperSlide key={'item-3'+index} className='text-blue-500 h-fit w-full'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/ARTI-04.png'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-black uppercase font-bold py-3'>Entrevista con ...</span>
-                <p className='uppercase text-xs'>Cristian Carabias libre como el viento</p>
+                <Items 
+                    src={'/articulos/top-3.jpg'}
+                    alt='articulo'
+                    title={'ROGER FEDERER'}
+                    description={'EN EL OCTAVO DÍA, DIOS CREO A ROGER FEDERER'}
+                />
             </SwiperSlide>
             <SwiperSlide key={'item-4'+index} className='text-blue-500 h-fit w-full'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/ARTI-05.png'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-black uppercase font-bold py-3'>Tecnología</span>
-                <p className='uppercase text-xs'>De lo analogo a lo digital, la singularidad</p>
+                <Items 
+                    src={'/articulos/top-4.jpg'}
+                    alt='articulo'
+                    title={'ZAPATERIAS PAKAR'}
+                    description={'COMO ESTRENAR EN ESTE REGRESO A CLASES'}
+                />
             </SwiperSlide>
             </>
         ))}
@@ -112,20 +88,39 @@ export default function SwiperTop(){
     )
 };
 
+function Items({ src, alt, title, description, }){
+    return(
+    <>
+    <div className='containerTop overflow-hidden'>
+        <Image 
+            src={src}
+            alt={alt}
+            width={960}
+            height={540}
+            className='object-cover w-full h-full'
+        />
+    </div>
+    <div className='h-5'></div>
+    <span className='text-black uppercase font-bold py-3'>{title}</span>
+    <p className='uppercase text-xs'>{description}</p>
+    </>
+    )
+}
+
 function Control({ direction = 'left', className, ...res }){
     return(
         <AnimatePresence>
             <motion.button 
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.85 }}
-                className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center z-10 bg-gray-500 bg-opacity-50 backdrop-blur-lg ${className}`} {...res}
+                className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center text-black z-10 border border-gray-900 ${className}`} {...res}
             >
                 {direction == 'left' ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className='mr-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FFF"} fill={"none"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className='mr-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#000"} fill={"none"}>
                         <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className='ml-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FFF"} fill={"none"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className='ml-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#000"} fill={"none"}>
                         <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 )}
