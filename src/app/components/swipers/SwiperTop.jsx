@@ -49,7 +49,7 @@ export default function SwiperTop(){
     >
         {arrayAux?.map((item, index) => (
             <>
-            <SwiperSlide key={'item-1'+index} className='text-blue-500 h-fit w-full'>
+            <SwiperSlide key={'item-1'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-1.jpg'}
                     alt='articulo'
@@ -57,7 +57,7 @@ export default function SwiperTop(){
                     description={'EL LEGADO DE UN GRANDE EN MÉXICO'}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-2'+index} className='text-blue-500 h-fit w-full'>
+            <SwiperSlide key={'item-2'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-2.jpg'}
                     alt='articulo'
@@ -65,7 +65,7 @@ export default function SwiperTop(){
                     description={'LOS MEJORES RECUERDOS SON LAS AVENTURAS'}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-3'+index} className='text-blue-500 h-fit w-full'>
+            <SwiperSlide key={'item-3'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-3.jpg'}
                     alt='articulo'
@@ -73,7 +73,7 @@ export default function SwiperTop(){
                     description={'EN EL OCTAVO DÍA, DIOS CREO A ROGER FEDERER'}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-4'+index} className='text-blue-500 h-fit w-full'>
+            <SwiperSlide key={'item-4'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-4.jpg'}
                     alt='articulo'

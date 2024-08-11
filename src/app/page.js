@@ -58,7 +58,7 @@ export default function Home() {
         <Button className={'mt-7'}>
           Suscribete
         </Button>
-        <div className="w-full max-w-[1320px] flex justify-center items-center">
+        <div className="w-full max-w-[1320px] flex justify-center items-center absolute bottom-0">
           <People 
             src={'/people/persona-1.png'}
             name={'Dana'}
@@ -83,7 +83,7 @@ export default function Home() {
         />
       </section>
       <section className="bg-white flex flex-col justify-center items-center">
-        <h3 className="uppercase text-blue-500 font-semibold text-[24px] tracking-[5px] mt-10">Lo más top</h3>
+        <h3 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] mt-10">Lo más top</h3>
         <div className="w-full max-w-[1000px] mx-auto mt-20 relative">
           <SwiperTop />
         </div>
@@ -103,6 +103,49 @@ export default function Home() {
           Suscribete
         </Button>
       </section>
+      <section className="flex flex-col justify-start items-center">
+        <Image 
+          src={'/titulo-full.png'}
+          alt="titulo"
+          width={960}
+          height={540}
+          className="w-1/3 h-auto z-[1]"
+        />
+        <h2 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] my-8">
+          Distribución Nacional
+        </h2>
+        <div className="flex justify-center items-center gap-5 w-fit">
+          <Image 
+            src={'/portadas/portada.png'}
+            alt="portada"
+            width={250}
+            height={407}
+            className="object-cover object-center scale-75 opacity-55 z-0"
+          />
+          <Image 
+            src={'/portadas/portada.png'}
+            alt="portada"
+            width={250}
+            height={407}
+            className="object-cover object-center absolute z-[1]"
+          />
+          <Image 
+            src={'/portadas/portada.png'}
+            alt="portada"
+            width={250}
+            height={407}
+            className="object-cover object-center scale-75 opacity-55 z-0"
+          />
+        </div>
+        <p className="uppercase text-blue-400 font-bold text-[36px] my-5">
+          * 6 Pass a long
+        </p>
+        <Button className={'text-blue-400 border-blue-400 !bg-white'}>
+          Anunciate
+        </Button>
+      </section>
+      <div className="w-full h-[32px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
+      <section className="bg-gradient-to-bl from-[#002349] to-[#00a9e9]"></section>
     </main>
     </>
   );
