@@ -140,12 +140,29 @@ export default function Home() {
         <p className="uppercase text-blue-400 font-bold text-[36px] my-5">
           * 6 Pass a long
         </p>
-        <Button className={'text-blue-400 border-blue-400 !bg-white'}>
+        <Button className={'!text-blue-400 !border-blue-400 !bg-white z-[2]'}>
           Anunciate
         </Button>
       </section>
-      <div className="w-full h-[32px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
-      <section className="bg-gradient-to-bl from-[#002349] to-[#00a9e9]"></section>
+      <div className="w-full h-[32px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat mt-[200px]" />
+      <section className="bg-gradient-to-bl from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
+        <Image 
+          src={'/portadas/magazine.png'}
+          alt="magazine"
+          width={1920}
+          height={1080}
+          className="absolute -top-1/2 w-3/4 h-auto"
+        />
+        <div className="flex justify-center items-center">
+          <Image 
+            src={'/logo.png'}
+            width={500}
+            height={100}
+            className="w-1/4 h-auto"
+          />
+        </div>
+        <hr className="w-full h-[1px] bg-white"/>
+      </section>
     </main>
     </>
   );
