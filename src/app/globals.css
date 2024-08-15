@@ -652,3 +652,11 @@ section {
   mask-image: linear-gradient(#000 75%, transparent 95%);
   -webkit-mask-image: linear-gradient(#000 75%, transparent 95%);
 }
+
+.swiperTop .swiper-wrapper .swiper-slide{
+  transition: all 0.5s;
+}
+
+.swiperTop .swiper-wrapper .swiper-slide-active{
+  width: 45% !important;
+}

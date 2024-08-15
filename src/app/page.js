@@ -88,6 +88,9 @@ export default function Home() {
         <div className="w-full max-w-[1000px] mx-auto mt-20 relative">
           <SwiperTop />
         </div>
+        <div className="w-full max-w-[1000px] flex gap-1">
+          
+        </div>
       </section>
       <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative flex flex-col justify-start items-center">
         <Image 

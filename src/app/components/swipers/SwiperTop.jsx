@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -41,11 +41,30 @@ export default function SwiperTop(){
     />
     <Swiper
         ref={sliderRef}
-        spaceBetween={50}
-        slidesPerView={4}
+        spaceBetween={0}
+        slidesPerView={1}
         navigation={false}
         loop
-        className='h-fit'
+        modules={[Autoplay]}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+        }}
+        breakpoints={{ 
+            768: {
+                spaceBetween: 50,
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            1440: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            }
+        }}
+        className='h-fit swiperTop'
     >
         {arrayAux?.map((item, index) => (
             <>
