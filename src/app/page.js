@@ -25,6 +25,9 @@ export default function Home() {
             alt="titulo"
             width={960}
             height={540}
+            priority
+            quality={100}
+            fetchPriority="high"
             className="w-1/4 h-auto z-[1]"
           />
           <h2 className="uppercase text-white text-[40px] text-center font-[200] w-[330px] leading-[40px] mt-2 z-[1]">
@@ -35,7 +38,10 @@ export default function Home() {
             alt="principal"
             width={960}
             height={540}
-            className="w-1/2 h-auto -mt-[15%] z-0 mask-img-gradient"
+            priority
+            quality={100}
+            fetchPriority="high"
+            className="w-1/2 h-auto -mt-[15%] z-0 mask-img-gradient mask-img-gradient-r"
           />
           <Button className={'mt-[-10%] z-[1]'} onClick={() => setOpen(true)}>
             Saber más
@@ -89,7 +95,7 @@ export default function Home() {
           <SwiperTop />
         </div>
         <div className="w-full max-w-[1000px] flex gap-1">
-          
+
         </div>
       </section>
       <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative flex flex-col justify-start items-center">

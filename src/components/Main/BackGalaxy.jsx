@@ -24,6 +24,9 @@ export default function BackGalaxy(){
                     alt="galaxia"
                     width={1920}
                     height={1080}
+                    priority
+                    quality={100}
+                    fetchPriority="high"
                     className="opacity-100 z-[1] left-0"
                 />
                 <Image 
@@ -31,6 +34,9 @@ export default function BackGalaxy(){
                     alt="galaxia"
                     width={1920}
                     height={1080}
+                    priority
+                    quality={100}
+                    fetchPriority="high"
                     className="opacity-100 z-[1] right-0 scale-x-[-1]"
                 />
                 <Image 
@@ -38,6 +44,9 @@ export default function BackGalaxy(){
                     alt="galaxia"
                     width={1920}
                     height={1080}
+                    priority
+                    quality={100}
+                    fetchPriority="high"
                     className="opacity-100 z-[1] right-0"
                 />
             </div>
