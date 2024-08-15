@@ -4,12 +4,15 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 const Button = dynamic(() => import('@/app/components/buttons/Button'));
 const People = dynamic(() => import('@/app/components/presentation/People'));
 const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
+const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
   
   return (
     <>
@@ -34,13 +37,14 @@ export default function Home() {
             height={540}
             className="w-1/2 h-auto -mt-[15%] z-0 mask-img-gradient"
           />
-          <Button className={'mt-[-10%] z-[1]'}>
+          <Button className={'mt-[-10%] z-[1]'} onClick={() => setOpen(true)}>
             Saber más
           </Button>
         </div>
       </section>
       <div className="w-full h-[25vh] bg-black"></div>
-      <section className="bg-black !z-[5] bg-[url(/bg-news.jpg)] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
+      <section className="bg-black !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
+        <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" />
         <Image 
           src={'/banners/banner-1.jpg'}
           width={2000}
@@ -54,10 +58,7 @@ export default function Home() {
           height={540}
           className="w-1/2 h-auto z-[1] mt-[80px]"
         />
-        <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center">Las mejores opiniones<br /> educativas del país</p>
-        <Button className={'mt-7'}>
-          Suscribete
-        </Button>
+        <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center z-10">Las mejores opiniones<br /> educativas del país</p>
         <div className="w-full max-w-[1320px] flex justify-center items-center absolute bottom-0">
           <People 
             src={'/people/persona-1.png'}
@@ -164,6 +165,7 @@ export default function Home() {
         <hr className="w-full h-[1px] bg-white"/>
       </section>
     </main>
+    <Modal open={open} setOpen={setOpen} />
     </>
   );
 }
