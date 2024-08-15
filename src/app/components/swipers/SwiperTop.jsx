@@ -33,13 +33,16 @@ export default function SwiperTop(){
         className={'left-0 xl:-left-10'}
         direction='left'
         onClick={() => handlePrev()}
+        key={'btn-prev'}
     />
     <Control 
         className={'right-0 xl:-right-10'}
         direction='right'
         onClick={() => handleNext()}
+        key={'btn-next'}
     />
     <Swiper
+        key={'swiper-top'}
         ref={sliderRef}
         spaceBetween={50}
         slidesPerView={1}
@@ -68,36 +71,40 @@ export default function SwiperTop(){
     >
         {arrayAux?.map((item, index) => (
             <>
-            <SwiperSlide key={'item-1'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-1'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-1.jpg'}
                     alt='articulo'
                     title={'RAFA MARQUEZ'}
                     description={'EL LEGADO DE UN GRANDE EN MÉXICO'}
+                    key={'item-top-1'+index}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-2'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-2'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-2.jpg'}
                     alt='articulo'
                     title={'PALACIO DE HIERRO'}
                     description={'LOS MEJORES RECUERDOS SON LAS AVENTURAS'}
+                    key={'item-top-2'+index}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-3'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-3'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-3.jpg'}
                     alt='articulo'
                     title={'ROGER FEDERER'}
                     description={'EN EL OCTAVO DÍA, DIOS CREO A ROGER FEDERER'}
+                    key={'item-top-3'+index}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-4'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-4'+index} className='text-blue-400 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-4.jpg'}
                     alt='articulo'
                     title={'ZAPATERIAS PAKAR'}
                     description={'COMO ESTRENAR EN ESTE REGRESO A CLASES'}
+                    key={'item-top-4'+index}
                 />
             </SwiperSlide>
             </>
@@ -107,9 +114,9 @@ export default function SwiperTop(){
     )
 };
 
-function Items({ src, alt, title, description, }){
+function Items({ src, alt, title, description, ...res }){
     return(
-    <>
+    <div {...res}>
     <div className='containerTop overflow-hidden'>
         <Image 
             src={src}
@@ -122,7 +129,7 @@ function Items({ src, alt, title, description, }){
     <div className='h-5'></div>
     <span className='text-black uppercase font-bold py-3'>{title}</span>
     <p className='uppercase text-xs'>{description}</p>
-    </>
+    </div>
     )
 }
 

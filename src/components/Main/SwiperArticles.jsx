@@ -40,6 +40,7 @@ export default function SwiperArticles(){
         onClick={() => handleNext()}
     />
     <Swiper
+        key={'swiper-articles'}
         ref={sliderRef}
         spaceBetween={50}
         slidesPerView={1}

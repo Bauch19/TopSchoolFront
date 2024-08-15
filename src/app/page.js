@@ -19,7 +19,7 @@ export default function Home() {
   
   return (
     <>
-    <main className="relative z-[0] w-[100vw] overflow-x-hidden bg-black">
+    <main className="relative z-0 w-[100vw] overflow-x-hidden bg-black">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
         <div className="w-full h-full flex flex-col justify-between relative items-center py-5 bg-transparent">
@@ -44,7 +44,7 @@ export default function Home() {
             priority
             quality={100}
             fetchPriority="high"
-            className="w-full md:w-3/4 lg:w-1/3 h-auto z-0 mask-img-gradient px-5"
+            className="w-full md:w-3/4 lg:w-1/3 h-auto z-0 mask-img-gradient-min px-5"
           />
           <Button className={'z-[1] absolute bottom-5'} onClick={() => setOpen(true)}>
             Saber más
@@ -182,14 +182,14 @@ export default function Home() {
           alt="magazine"
           width={1920}
           height={1080}
-          className="w-3/4 h-auto"
+          className="w-full max-w-[500px] h-auto"
         />
         <div className="flex justify-center items-center">
           <Image 
             src={'/logo.png'}
             width={500}
             height={100}
-            className="w-1/4 h-auto"
+            className="w-full max-w-[150px] h-auto"
           />
         </div>
         <hr className="w-full h-[1px] bg-white"/>
