@@ -4,12 +4,13 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 const Button = dynamic(() => import('@/app/components/buttons/Button'));
 const People = dynamic(() => import('@/app/components/presentation/People'));
 const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
 const Modal = dynamic(() => import('@/app/components/modals/Modal'));
+import ParticleCanvas from "./components/particles/ParticleCanvas";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -19,6 +20,7 @@ export default function Home() {
   
   return (
     <>
+    <ParticleCanvas />
     <main className="relative z-0 w-[100vw] overflow-x-hidden bg-black">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
