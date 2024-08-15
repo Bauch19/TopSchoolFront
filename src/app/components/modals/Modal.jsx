@@ -31,7 +31,7 @@ export default function Modal({ open, setOpen }) {
               },
             }}
             onClick={(e) => e.stopPropagation()}
-            className="w-fit h-fit rounded-[20px] bg-white relative flex flex-col justify-center items-center"
+            className="w-full max-w-[560px] h-fit mx-5 rounded-[20px] bg-white relative flex flex-col justify-center items-center"
           >
             <motion.button 
               whileHover={{ scale: 1.15 }}
@@ -42,11 +42,11 @@ export default function Modal({ open, setOpen }) {
               <Icons.Close className="size-6 text-black" />
             </motion.button>
 
-            <h3 className="fuppercase py-2 text-black text-[20px] text-center font-[200]">
+            <h3 className="fuppercase py-2 px-10 text-black text-[20px] text-center font-[200]">
               El poder del <span className="text-black font-bold">Mindfulness</span> en la infancia
             </h3>
 
-            <iframe width="560" height="315" className="rounded-b-[20px]" src="https://www.youtube.com/embed/a_hPelcPRTg?si=Jg6UpGhHq6qWPrpt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className="h-[315px] w-full rounded-b-[20px]" src="https://www.youtube.com/embed/a_hPelcPRTg?si=Jg6UpGhHq6qWPrpt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </motion.div>
         </motion.div>
       )}

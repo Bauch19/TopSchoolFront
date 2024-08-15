@@ -13,13 +13,16 @@ const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({
+    email: '',
+  });
   
   return (
     <>
-    <main className="relative z-[0] w-[100vw] overflow-x-hidden bg-white">
+    <main className="relative z-[0] w-[100vw] overflow-x-hidden bg-black">
       <BackGalaxy />
-      <section className="absolute top-0 !z-[3] bg-transparent">
-        <div className="w-full h-full flex flex-col justify-start items-center py-5 bg-transparent">
+      <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
+        <div className="w-full h-full flex flex-col justify-between relative items-center py-5 bg-transparent">
           <Image 
             src={'/titulo-full.png'}
             alt="titulo"
@@ -28,44 +31,47 @@ export default function Home() {
             priority
             quality={100}
             fetchPriority="high"
-            className="w-1/4 h-auto z-[1]"
+            className="w-full max-w-[300px] h-auto z-[1]"
           />
           <h2 className="uppercase text-white text-[40px] text-center font-[200] w-[330px] leading-[40px] mt-2 z-[1]">
             El poder del <span className="text-white font-bold">Mindfulness</span> en la infancia
           </h2>
           <Image 
-            src={'/boys.webp'}
+            src={'/boys.png'}
             alt="principal"
             width={960}
             height={540}
             priority
             quality={100}
             fetchPriority="high"
-            className="w-1/2 h-auto -mt-[15%] z-0 mask-img-gradient mask-img-gradient-r"
+            className="w-full md:w-3/4 lg:w-1/3 h-auto z-0 mask-img-gradient px-5"
           />
-          <Button className={'mt-[-10%] z-[1]'} onClick={() => setOpen(true)}>
+          <Button className={'z-[1] absolute bottom-5'} onClick={() => setOpen(true)}>
             Saber más
           </Button>
         </div>
-      </section>
-      <div className="w-full h-[25vh] bg-black"></div>
-      <section className="bg-black !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
-        <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" />
+      </div>
+      <div className="w-full h-fit py-10 px-5 flex justify-center items-center bg-black">
         <Image 
           src={'/banners/banner-1.jpg'}
           width={2000}
           height={538}
-          className="absolute -top-[75px] w-[1000px] h-[150px] object-cover"
+          className=" w-[1000px] h-[150px] object-cover"
         />
+      </div>
+      <section className="bg-black py-10 !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
+        <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" />
         <Image 
           src={'/titulo-full.png'}
           alt="titulo"
           width={960}
           height={540}
-          className="w-1/2 h-auto z-[1] mt-[80px]"
+          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] mt-20 min-[1440px]:mt-20 h-auto z-[1]"
         />
-        <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center z-10">Las mejores opiniones<br /> educativas del país</p>
-        <div className="w-full max-w-[1320px] flex justify-center items-center absolute bottom-0">
+        <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto">
+          Las mejores opiniones<br /> educativas del país
+        </div>
+        <div className="w-full max-w-[1320px] flex justify-center items-center px-5 absolute bottom-0">
           <People 
             src={'/people/persona-1.png'}
             name={'Dana'}
@@ -86,16 +92,31 @@ export default function Home() {
           src={'/banners/banner-1.jpg'}
           width={2000}
           height={538}
-          className="absolute -bottom-[75px] w-[1000px] h-[150px] object-cover"
+          className="absolute -bottom-[75px] w-[1000px] h-[150px] object-cover px-5"
         />
       </section>
-      <section className="bg-white flex flex-col justify-center items-center">
-        <h3 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] mt-10">Lo más top</h3>
-        <div className="w-full max-w-[1000px] mx-auto mt-20 relative">
+      <section className="bg-white flex flex-col justify-between gap-10 lg:gap-20 py-10 items-center">
+        <h3 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] mt-20">Lo más top</h3>
+        <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
           <SwiperTop />
         </div>
-        <div className="w-full max-w-[1000px] flex gap-1">
-
+        <div className="w-full h-auto flex flex-col gap-10 lg:gap-20 justify-center items-center px-5">
+          <p className="text-gray-600 font-semibold text-[16px] tracking-[5px] uppercase text-center">
+            ¿Te gustaría suscribirte a la revista?
+          </p>
+          <div className="w-full h-[20px] flex justify-center gap-2 items-end">
+            <input 
+              type="email" 
+              id="email"
+              name="emal"
+              value={form.email} 
+              onChange={(e) => setForm({...form, email: e.target.value})}
+              className="w-full max-w-[1000px] text-[14px] text-black h-full bg-transparent border-b border-black" 
+            />
+            <Button className={''}>
+              Enviar
+            </Button>
+          </div>
         </div>
       </section>
       <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative flex flex-col justify-start items-center">
@@ -113,7 +134,7 @@ export default function Home() {
           Suscribete
         </Button>
       </section>
-      <section className="flex flex-col justify-start items-center">
+      {/* <section className="flex flex-col justify-start items-center">
         <Image 
           src={'/titulo-full.png'}
           alt="titulo"
@@ -153,15 +174,15 @@ export default function Home() {
         <Button className={'!text-blue-400 !border-blue-400 !bg-white z-[2]'}>
           Anunciate
         </Button>
-      </section>
-      <div className="w-full h-[32px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat mt-[200px]" />
+      </section> */}
+      <div className="w-full h-[32px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
       <section className="bg-gradient-to-bl from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
         <Image 
           src={'/portadas/magazine.png'}
           alt="magazine"
           width={1920}
           height={1080}
-          className="absolute -top-1/2 w-3/4 h-auto"
+          className="w-3/4 h-auto"
         />
         <div className="flex justify-center items-center">
           <Image 

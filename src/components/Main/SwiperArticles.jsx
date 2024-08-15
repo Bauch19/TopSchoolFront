@@ -30,22 +30,36 @@ export default function SwiperArticles(){
     return(
     <>
     <Control 
-        className={'-left-10'}
+        className={'left-0 xl:-left-10'}
         direction='left'
         onClick={() => handlePrev()}
     />
     <Control 
-        className={'-right-10'}
+        className={'right-0 xl:-right-10'}
         direction='right'
         onClick={() => handleNext()}
     />
     <Swiper
         ref={sliderRef}
         spaceBetween={50}
-        slidesPerView={4}
+        slidesPerView={1}
         navigation={false}
         loop
-        className='h-fit'
+        breakpoints={{ 
+            768: {
+                spaceBetween: 50,
+                slidesPerView: 2,
+            },
+            1024: {
+                spaceBetween: 50,
+                slidesPerView: 3,
+            },
+            1280: {
+                spaceBetween: 50,
+                slidesPerView: 4,
+            },
+        }}
+        className='h-fit my-5'
     >
         {arrayAux?.map((item, index) => (
             <>

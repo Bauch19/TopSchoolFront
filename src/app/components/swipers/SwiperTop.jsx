@@ -30,18 +30,18 @@ export default function SwiperTop(){
     return(
     <>
     <Control 
-        className={'-left-12'}
+        className={'left-0 xl:-left-10'}
         direction='left'
         onClick={() => handlePrev()}
     />
     <Control 
-        className={'-right-12'}
+        className={'right-0 xl:-right-10'}
         direction='right'
         onClick={() => handleNext()}
     />
     <Swiper
         ref={sliderRef}
-        spaceBetween={0}
+        spaceBetween={50}
         slidesPerView={1}
         navigation={false}
         loop
@@ -56,13 +56,13 @@ export default function SwiperTop(){
                 slidesPerView: 2,
             },
             1024: {
+                spaceBetween: 50,
                 slidesPerView: 3,
-                spaceBetween: 50,
             },
-            1440: {
-                slidesPerView: 4,
+            1280: {
                 spaceBetween: 50,
-            }
+                slidesPerView: 4,
+            },
         }}
         className='h-fit swiperTop'
     >
