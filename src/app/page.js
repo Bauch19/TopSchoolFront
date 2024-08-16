@@ -63,11 +63,13 @@ export default function Home() {
       <section className="bg-transparent py-10 !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
         {/* <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" /> */}
         <Image 
-          src={'/titulo-full.png'}
+          src={'/logo-news.png'}
           alt="titulo"
           width={960}
           height={540}
-          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] mt-10 h-auto z-[1]"
+          priority
+          quality={100}
+          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] my-10 h-auto z-[1]"
         />
         <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto">
           Las mejores opiniones<br /> educativas del país
@@ -119,11 +121,13 @@ export default function Home() {
       </section>
       <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative flex flex-col justify-start items-center">
         <Image 
-          src={'/titulo-full.png'}
+          src={'/logo-guia.png'}
           alt="titulo"
           width={960}
           height={540}
-          className="w-1/3 h-auto z-[1]"
+          priority
+          quality={100}
+          className="w-full max-w-[900px] px-5 my-5 h-auto z-[1]"
         />
         <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center">
           DONDE ENCONTRAR LA<br /> MEJOR OFERTA EDUCATIVA
