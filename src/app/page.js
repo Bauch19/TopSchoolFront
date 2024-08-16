@@ -109,9 +109,10 @@ export default function Home() {
               type="email" 
               id="email"
               name="emal"
+              placeholder="Correo electrónico"
               value={form.email} 
               onChange={(e) => setForm({...form, email: e.target.value})}
-              className="w-full max-w-[1000px] text-[14px] text-black h-full bg-transparent border-b border-gray-50" 
+              className="w-full max-w-[1000px] placeholder:text-gray-400 text-[14px] text-gray-50 h-full bg-transparent border-b border-gray-50" 
             />
             <Button className={''}>
               Enviar

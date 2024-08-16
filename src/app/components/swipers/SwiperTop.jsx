@@ -139,7 +139,7 @@ function Control({ direction = 'left', className, ...res }){
             <motion.button 
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.85 }}
-                className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center text-gray-200 z-10 border border-gray-200 ${className}`} {...res}
+                className={`absolute w-10 h-10 top-[40%] rounded-full bg-gray-900 bg-opacity-[0.2] backdrop-blur-sm flex justify-center items-center text-gray-200 z-10 border border-gray-200 ${className}`} {...res}
             >
                 {direction == 'left' ? (
                     <svg xmlns="http://www.w3.org/2000/svg" className='mr-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FAFAFA"} fill={"none"}>
