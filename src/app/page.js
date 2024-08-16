@@ -9,6 +9,7 @@ const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 const Button = dynamic(() => import('@/app/components/buttons/Button'));
 const People = dynamic(() => import('@/app/components/presentation/People'));
 const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
+const SwiperBanners = dynamic(() => import('@/app/components/swipers/SwiperBanners'));
 const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 import ParticleCanvas from "./components/particles/ParticleCanvas";
 
@@ -53,13 +54,8 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="w-full h-fit py-10 px-5 flex justify-center items-center bg-black">
-        <Image 
-          src={'/banners/banner-1.jpg'}
-          width={2000}
-          height={538}
-          className=" w-[1000px] h-[150px] object-cover"
-        />
+      <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-black">
+        <SwiperBanners />
       </div>
       <section className="bg-black py-10 !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
         <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" />
@@ -90,15 +86,12 @@ export default function Home() {
             lastName={'Soler'}
           />
         </div>
-        <Image 
-          src={'/banners/banner-1.jpg'}
-          width={2000}
-          height={538}
-          className="absolute -bottom-[75px] w-[1000px] h-[150px] object-cover px-5"
-        />
+        <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-transparent absolute -bottom-[170px]">
+          <SwiperBanners />
+        </div>
       </section>
       <section className="bg-white flex flex-col justify-between gap-10 lg:gap-20 py-10 items-center">
-        <h3 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] mt-20">Lo más top</h3>
+        <h3 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] mt-[110px]">Lo más top</h3>
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
           <SwiperTop />
         </div>
