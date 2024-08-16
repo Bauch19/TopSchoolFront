@@ -69,7 +69,7 @@ export default function BackGalaxy(){
         </div>
         <div className="z-[2] w-full max-w-[1000px] mx-auto relative my-[90px] flex flex-col justify-center items-center">
             <span className="w-full text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span>
-            <div className="w-full max-w-[1000px] px-10 h-auto mx-auto mt-20 relative">
+            <div className="w-full max-w-[1000px] px-10 h-auto mx-auto mt-10 relative">
                 <SwiperArticles />
             </div>
         </div>

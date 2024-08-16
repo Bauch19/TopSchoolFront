@@ -55,12 +55,12 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="w-full h-fit bg-black">
-        <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-black">
+      <div className="w-full h-fit bg-black pb-[120px]">
+        <div className="w-full max-w-[1000px] mx-auto h-fit px-5 bg-black">
           <SwiperBanners />
         </div>
       </div>
-      <section className="bg-transparent py-10 !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
+      <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
         {/* <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" /> */}
         <Image 
           src={'/logo-news.png'}
@@ -69,12 +69,12 @@ export default function Home() {
           height={540}
           priority
           quality={100}
-          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] my-10 h-auto z-[1]"
+          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] my-20 h-auto z-[1]"
         />
         <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto">
           Las mejores opiniones<br /> educativas del país
         </div>
-        <div className="w-full max-w-[1320px] flex justify-center items-center px-5 absolute bottom-0">
+        <div className="w-full max-w-[1000px] flex justify-between items-center px-5 absolute bottom-0">
           <People 
             src={'/people/persona-1.png'}
             name={'Dana'}
@@ -95,12 +95,12 @@ export default function Home() {
           <SwiperBanners />
         </div>
       </section>
-      <section className="bg-transparent flex flex-col justify-between gap-10 lg:gap-20 py-10 items-center">
-        <h3 className="uppercase text-blue-300 font-semibold text-[24px] tracking-[5px] mt-[140px] z-10">Lo más top</h3>
-        <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
+      <section className="bg-transparent flex flex-col justify-between gap-10 lg:gap-20 py-20 items-center">
+        <h3 className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10">Lo más top</h3>
+        <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative mb-10">
           <SwiperTop />
         </div>
-        <div className="w-full h-auto flex flex-col gap-10 lg:gap-20 justify-center items-center px-5 z-10">
+        {/* <div className="w-full h-auto flex flex-col gap-10 lg:gap-20 justify-center items-center px-5 z-10">
           <p className="text-gray-200 font-semibold text-[16px] tracking-[5px] uppercase text-center">
             ¿Te gustaría suscribirte a la revista?
           </p>
@@ -118,9 +118,9 @@ export default function Home() {
               Enviar
             </Button>
           </div>
-        </div>
+        </div> */}
       </section>
-      <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative flex flex-col justify-start items-center">
+      <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative py-20 flex flex-col gap-20 justify-start items-center">
         <Image 
           src={'/logo-guia.png'}
           alt="titulo"
@@ -128,7 +128,7 @@ export default function Home() {
           height={540}
           priority
           quality={100}
-          className="w-full max-w-[900px] px-5 my-5 h-auto z-[1]"
+          className="w-full max-w-[700px] px-5 h-auto z-[1]"
         />
         <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center">
           DONDE ENCONTRAR LA<br /> MEJOR OFERTA EDUCATIVA
@@ -178,15 +178,15 @@ export default function Home() {
           Anunciate
         </Button>
       </section> */}
-      <div className="w-full h-[32px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
-      <section className="bg-gradient-to-bl from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
-        <Image 
+      <div className="w-full h-[60px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
+      <section className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
+        {/* <Image 
           src={'/portadas/magazine.png'}
           alt="magazine"
           width={1920}
           height={1080}
           className="w-full max-w-[500px] h-auto"
-        />
+        /> */}
         <div className="flex justify-center items-center">
           <Image 
             src={'/logo-white.png'}
