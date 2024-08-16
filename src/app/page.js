@@ -11,6 +11,7 @@ const People = dynamic(() => import('@/app/components/presentation/People'));
 const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
 const SwiperBanners = dynamic(() => import('@/app/components/swipers/SwiperBanners'));
 const Modal = dynamic(() => import('@/app/components/modals/Modal'));
+const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
 import ParticleCanvas from "./components/particles/ParticleCanvas";
 
 export default function Home() {
@@ -131,23 +132,7 @@ export default function Home() {
           </div>
         </div> */}
       </section>
-      <section className="bg-[url(/bg-home.jpg)] bg-no-repeat bg-center bg-cover relative py-20 flex flex-col gap-20 justify-start items-center">
-        <Image 
-          src={'/logo-guia.png'}
-          alt="titulo"
-          width={960}
-          height={540}
-          priority
-          quality={100}
-          className="w-full max-w-[700px] px-5 h-auto z-[1]"
-        />
-        <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center">
-          DONDE ENCONTRAR LA<br /> MEJOR OFERTA EDUCATIVA
-        </p>
-        <Button className={'mt-7'}>
-          Suscribete
-        </Button>
-      </section>
+      <ParalaxHome />
       {/* <section className="flex flex-col justify-start items-center">
         <Image 
           src={'/titulo-full.png'}

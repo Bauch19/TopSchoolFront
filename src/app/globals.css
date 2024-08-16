@@ -702,3 +702,14 @@ section {
     width: 45% !important;
   }
 }
+
+.parallax-mouse{
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.parallax-mouse div .parallax-element{
+  position: absolute;
+}

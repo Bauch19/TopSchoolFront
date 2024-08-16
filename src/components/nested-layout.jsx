@@ -6,14 +6,17 @@ import React from 'react'
 // import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
 import { PrimeReactProvider } from 'primereact/api';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export default function NestedLayout({ children }) {
   return (
     <PrimeReactProvider>
       <UserContextProvider >
-        {/* <Header /> */}
-        {children}
-        {/* <Footer /> */}
+        <ParallaxProvider>
+          {/* <Header /> */}
+          {children}
+          {/* <Footer /> */}
+        </ParallaxProvider>
       </UserContextProvider>
     </PrimeReactProvider>
   )
