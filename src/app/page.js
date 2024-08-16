@@ -188,10 +188,11 @@ export default function Home() {
         />
         <div className="flex justify-center items-center">
           <Image 
-            src={'/logo.png'}
+            src={'/logo-white.png'}
             width={500}
             height={100}
-            className="w-full max-w-[150px] h-auto"
+            priority quality={75}
+            className="w-full max-w-[150px] my-10 h-auto"
           />
         </div>
         <hr className="w-full h-[1px] bg-white"/>
