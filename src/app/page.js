@@ -37,9 +37,20 @@ export default function Home() {
             fetchPriority="high"
             className="w-full max-w-[300px] h-auto z-[1]"
           />
-          <h2 className="uppercase text-white text-[40px] text-center font-[200] w-[330px] leading-[40px] mt-2 z-[1]">
+          <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center gap-0 mt-4">
+            <p className="uppercase text-white text-[40px] font-[200] w-full text-left">
+              El poder del
+            </p>
+            <span className="text-white uppercase text-[80px] -mt-8 text-center font-bold">
+              Mindfulness
+            </span>
+            <p className="uppercase text-white text-[40px] font-[200] -mt-8 w-full text-right">
+              en la infancia
+            </p>
+          </div>
+          {/* <h2 className="uppercase text-white text-[40px] text-center font-[200] w-[330px] leading-[40px] mt-2 z-[1]">
             El poder del <span className="text-white font-bold">Mindfulness</span> en la infancia
-          </h2>
+          </h2> */}
           <Image 
             src={'/boys.png'}
             alt="principal"
@@ -48,7 +59,7 @@ export default function Home() {
             priority
             quality={100}
             fetchPriority="high"
-            className="w-full md:w-3/4 lg:w-1/3 h-auto z-0 mask-img-gradient-min px-5"
+            className="w-full md:w-3/4 lg:w-1/3 h-auto z-0 mask-img-gradient-min brightness-[0.85] px-5"
           />
           <Button className={'z-[1] absolute bottom-5'} onClick={() => setOpen(true)}>
             Saber más
