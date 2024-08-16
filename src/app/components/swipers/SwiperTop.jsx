@@ -71,7 +71,7 @@ export default function SwiperTop(){
     >
         {arrayAux?.map((item, index) => (
             <>
-            <SwiperSlide key={'item-top-1'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-1'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-1.jpg'}
                     alt='articulo'
@@ -80,7 +80,7 @@ export default function SwiperTop(){
                     key={'item-top-1'+index}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-top-2'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-2'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-2.jpg'}
                     alt='articulo'
@@ -89,7 +89,7 @@ export default function SwiperTop(){
                     key={'item-top-2'+index}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-top-3'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-3'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-3.jpg'}
                     alt='articulo'
@@ -98,7 +98,7 @@ export default function SwiperTop(){
                     key={'item-top-3'+index}
                 />
             </SwiperSlide>
-            <SwiperSlide key={'item-top-4'+index} className='text-blue-400 h-fit w-full'>
+            <SwiperSlide key={'item-top-4'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-4.jpg'}
                     alt='articulo'
@@ -127,7 +127,7 @@ function Items({ src, alt, title, description, ...res }){
         />
     </div>
     <div className='h-5'></div>
-    <span className='text-black uppercase font-bold py-3'>{title}</span>
+    <span className='text-gray-200 uppercase font-bold py-3'>{title}</span>
     <p className='uppercase text-xs'>{description}</p>
     </div>
     )
@@ -139,14 +139,14 @@ function Control({ direction = 'left', className, ...res }){
             <motion.button 
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.85 }}
-                className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center text-black z-10 border border-gray-900 ${className}`} {...res}
+                className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center text-gray-200 z-10 border border-gray-200 ${className}`} {...res}
             >
                 {direction == 'left' ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" className='mr-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#000"} fill={"none"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className='mr-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FAFAFA"} fill={"none"}>
                         <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className='ml-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#000"} fill={"none"}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className='ml-[2px]' viewBox="0 0 24 24" width={24} height={24} color={"#FAFAFA"} fill={"none"}>
                         <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 )}

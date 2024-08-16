@@ -22,7 +22,8 @@ export default function Home() {
   return (
     <>
     <ParticleCanvas />
-    <main className="relative z-0 w-[100vw] overflow-x-hidden bg-black">
+    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-full h-screen object-cover object-center z-0 brightness-75 fixed" />
+    <main className="relative z-0 w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
         <div className="w-full h-full flex flex-col justify-between relative items-center py-5 bg-transparent">
@@ -54,17 +55,19 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-black">
-        <SwiperBanners />
+      <div className="w-full h-fit bg-black">
+        <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-black">
+          <SwiperBanners />
+        </div>
       </div>
-      <section className="bg-black py-10 !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
-        <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" />
+      <section className="bg-transparent py-10 !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
+        {/* <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" /> */}
         <Image 
           src={'/titulo-full.png'}
           alt="titulo"
           width={960}
           height={540}
-          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] mt-20 min-[1440px]:mt-20 h-auto z-[1]"
+          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] mt-10 h-auto z-[1]"
         />
         <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto">
           Las mejores opiniones<br /> educativas del país
@@ -90,23 +93,23 @@ export default function Home() {
           <SwiperBanners />
         </div>
       </section>
-      <section className="bg-white flex flex-col justify-between gap-10 lg:gap-20 py-10 items-center">
-        <h3 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] mt-[110px]">Lo más top</h3>
+      <section className="bg-transparent flex flex-col justify-between gap-10 lg:gap-20 py-10 items-center">
+        <h3 className="uppercase text-blue-300 font-semibold text-[24px] tracking-[5px] mt-[140px] z-10">Lo más top</h3>
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
           <SwiperTop />
         </div>
-        <div className="w-full h-auto flex flex-col gap-10 lg:gap-20 justify-center items-center px-5">
-          <p className="text-gray-600 font-semibold text-[16px] tracking-[5px] uppercase text-center">
+        <div className="w-full h-auto flex flex-col gap-10 lg:gap-20 justify-center items-center px-5 z-10">
+          <p className="text-gray-200 font-semibold text-[16px] tracking-[5px] uppercase text-center">
             ¿Te gustaría suscribirte a la revista?
           </p>
-          <div className="w-full h-[20px] flex justify-center gap-2 items-end">
+          <div className="w-full h-[20px] flex justify-center gap-2 items-end mb-20">
             <input 
               type="email" 
               id="email"
               name="emal"
               value={form.email} 
               onChange={(e) => setForm({...form, email: e.target.value})}
-              className="w-full max-w-[1000px] text-[14px] text-black h-full bg-transparent border-b border-black" 
+              className="w-full max-w-[1000px] text-[14px] text-black h-full bg-transparent border-b border-gray-50" 
             />
             <Button className={''}>
               Enviar
