@@ -19,7 +19,7 @@ export default function BackGalaxy(){
                 duration: 120,
                 ease: "linear",
             }}
-            className="hidden lg:block absolute !-z-[1] w-full h-full"
+            className="hidden lg:block absolute !-z-[1] w-full h-full brightness-90"
         >
             <div className="flex w-full -z-[1]">
                 <Image 
