@@ -11,15 +11,14 @@ const People = dynamic(() => import('@/app/components/presentation/People'));
 const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
 const SwiperBanners = dynamic(() => import('@/app/components/swipers/SwiperBanners'));
 const Modal = dynamic(() => import('@/app/components/modals/Modal'));
+const ModalContact = dynamic(() => import('@/app/components/modals/ModalContact'));
 const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
 import ParticleCanvas from "./components/particles/ParticleCanvas";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  const [form, setForm] = useState({
-    email: '',
-  });
-  
+  const [openContact, setOpenContact] = useState(false);
+
   return (
     <>
     <ParticleCanvas />
@@ -112,77 +111,10 @@ export default function Home() {
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative mb-10">
           <SwiperTop />
         </div>
-        {/* <div className="w-full h-auto flex flex-col gap-10 lg:gap-20 justify-center items-center px-5 z-10">
-          <p className="text-gray-200 font-semibold text-[16px] tracking-[5px] uppercase text-center">
-            ¿Te gustaría suscribirte a la revista?
-          </p>
-          <div className="w-full h-[20px] flex justify-center gap-2 items-end mb-20">
-            <input 
-              type="email" 
-              id="email"
-              name="emal"
-              placeholder="Correo electrónico"
-              value={form.email} 
-              onChange={(e) => setForm({...form, email: e.target.value})}
-              className="w-full max-w-[1000px] placeholder:text-gray-400 text-[14px] text-gray-50 h-full bg-transparent border-b border-gray-50" 
-            />
-            <Button className={''}>
-              Enviar
-            </Button>
-          </div>
-        </div> */}
       </section>
-      <ParalaxHome />
-      {/* <section className="flex flex-col justify-start items-center">
-        <Image 
-          src={'/titulo-full.png'}
-          alt="titulo"
-          width={960}
-          height={540}
-          className="w-1/3 h-auto z-[1]"
-        />
-        <h2 className="uppercase text-blue-400 font-semibold text-[24px] tracking-[5px] my-8">
-          Distribución Nacional
-        </h2>
-        <div className="flex justify-center items-center gap-5 w-fit">
-          <Image 
-            src={'/portadas/portada.png'}
-            alt="portada"
-            width={250}
-            height={407}
-            className="object-cover object-center scale-75 opacity-55 z-0"
-          />
-          <Image 
-            src={'/portadas/portada.png'}
-            alt="portada"
-            width={250}
-            height={407}
-            className="object-cover object-center absolute z-[1]"
-          />
-          <Image 
-            src={'/portadas/portada.png'}
-            alt="portada"
-            width={250}
-            height={407}
-            className="object-cover object-center scale-75 opacity-55 z-0"
-          />
-        </div>
-        <p className="uppercase text-blue-400 font-bold text-[36px] my-5">
-          * 6 Pass a long
-        </p>
-        <Button className={'!text-blue-400 !border-blue-400 !bg-white z-[2]'}>
-          Anunciate
-        </Button>
-      </section> */}
+      <ParalaxHome open={openContact} setOpen={setOpenContact} />
       <div className="w-full h-[60px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
       <section className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
-        {/* <Image 
-          src={'/portadas/magazine.png'}
-          alt="magazine"
-          width={1920}
-          height={1080}
-          className="w-full max-w-[500px] h-auto"
-        /> */}
         <div className="flex justify-center items-center">
           <Image 
             src={'/logo-white.png'}
@@ -196,6 +128,7 @@ export default function Home() {
       </section>
     </main>
     <Modal open={open} setOpen={setOpen} />
+    <ModalContact open={openContact} setOpen={setOpenContact} />
     </>
   );
 }

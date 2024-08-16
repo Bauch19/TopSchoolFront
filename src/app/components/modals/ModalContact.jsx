@@ -1,7 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Icons } from "@/components/Icons";
+import Button from "../buttons/Button";
+import { useState } from "react";
 
-export default function Modal({ open, setOpen }) {
+export default function ModalContact({ open, setOpen }) {
+  const [form, setForm] = useState({
+    email: '',
+  });
+
   return (
     <AnimatePresence>
       {open && (
@@ -31,22 +37,36 @@ export default function Modal({ open, setOpen }) {
               },
             }}
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-[560px] h-fit mx-5 rounded-[20px] bg-white relative flex flex-col justify-center items-center"
+            className="w-full max-w-[800px] h-fit mx-5 p-5 rounded-[20px] bg-white relative flex flex-col gap-10 justify-center items-center"
           >
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.85 }}
-              onClick={() => setOpen(false)} 
+              onClick={() => setOpen(false)}
               className="w-7 h-7 flex justify-center items-center rounded-full transition bg-gray-300 hover:brightness-95 absolute top-2 right-2"
             >
               <Icons.Close className="size-6 text-black" />
             </motion.button>
 
-            <h3 className="uppercase py-2 px-10 text-black text-[20px] text-center font-[200]">
-              El poder del <span className="text-black font-bold">Mindfulness</span> en la infancia
+            <h3 className="text-gray-700 font-semibold text-[16px] tracking-[5px] py-2 px-10 uppercase text-center">
+              ¿Te gustaría suscribirte a la revista?
             </h3>
 
-            <iframe className="h-[315px] w-full rounded-b-[20px]" src="https://www.youtube.com/embed/a_hPelcPRTg?si=Jg6UpGhHq6qWPrpt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div className="w-full h-[24px] flex justify-center gap-2 items-center">
+              <input 
+                type="email" 
+                id="email"
+                name="emal"
+                placeholder="Correo electrónico"
+                value={form.email} 
+                onChange={(e) => setForm({...form, email: e.target.value})}
+                className="w-full max-w-[1000px] placeholder:text-gray-600 text-[14px] text-gray-900 h-full bg-transparent border-b border-gray-500" 
+              />
+              <Button onClick={() => setForm({ email: '' })} className={'!border-black !bg-transparent !text-black'}>
+                Enviar
+              </Button>
+            </div>
+
           </motion.div>
         </motion.div>
       )}
