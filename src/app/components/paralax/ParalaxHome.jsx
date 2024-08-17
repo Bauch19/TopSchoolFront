@@ -91,18 +91,9 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[500px] mx-auto px-5 h-auto z-[1] parallax-element -bottom-2"
+        className="w-full max-w-[500px] mx-auto px-5 h-auto z-[1] parallax-element bottom-0"
         data-parallax-strength="100"
       />
-      {/* <Image 
-        src={'/people/guia-img.png'}
-        alt="personas"
-        width={960}
-        height={540}
-        priority
-        quality={100}
-        className="w-full max-w-[500px] mx-auto px-5 h-auto z-[1] absolute bottom-0"
-      /> */}
     </div>
   );
 }
