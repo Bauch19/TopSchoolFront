@@ -24,6 +24,9 @@ const ParticlesJs = (props) => {
           value: "transparent",
         },
       },
+      width: '100vw',
+      position: 'absolute',
+      top: '0px',
       fpsLimit: 120,
       interactivity: {
         events: {

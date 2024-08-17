@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-    <motion.button className={'z-50 hidden md:fixed right-4 bottom-4 p-5 rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+    <motion.button whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'z-50 hidden md:block fixed right-4 bottom-4 p-5 rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
       <Icons.Notebook className={'size-10'} />
     </motion.button>
     <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-screen h-screen object-cover object-center -z-[3] brightness-75 fixed" />
