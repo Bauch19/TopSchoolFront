@@ -38,13 +38,13 @@ export default function Home() {
             className="w-full max-w-[300px] h-auto !z-[3]"
           />
           <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center !z-10 gap-0 mt-4">
-            <p className="uppercase text-white text-[40px] font-[200] w-full text-left">
+            <p className="uppercase text-white text-[25px] md:text-[40px] font-[200] w-full text-left">
               El poder del
             </p>
-            <span className="text-white uppercase text-[80px] -mt-8 text-center font-bold">
+            <span className="text-white uppercase text-[45px] md:text-[80px] -mt-4 md:-mt-8 text-center font-bold">
               Mindfulness
             </span>
-            <p className="uppercase text-white text-[40px] font-[200] -mt-8 w-full text-right">
+            <p className="uppercase text-white text-[25px] md:text-[40px] font-[200] -mt-4 md:-mt-8 w-full text-right">
               en la infancia
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
           <SwiperBanners />
         </div>
       </section>
-      <section className="bg-transparent flex flex-col justify-between gap-10 lg:gap-20 py-20 items-center">
+      <section className="bg-transparent flex flex-col justify-center gap-10 lg:gap-20 py-20 items-center">
         <h3 className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10">Lo más top</h3>
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative mb-10">
           <SwiperTop />

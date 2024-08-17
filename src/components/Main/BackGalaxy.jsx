@@ -65,14 +65,14 @@ export default function BackGalaxy(){
             fetchPriority="high"
             className="w-full h-[120vh] absolute top-0 mask-img-gradient bg-black -z-[1] object-cover object-center lg:hidden"
         />
-        <div className="wrappers w-full h-full relative mt-20 z-[2]">
+        <div className="wrappers w-full h-full relative pt-20 z-[2]">
             {/* <div class="stars"></div> */}
         </div>
     </div>
     <div className="absolute w-full h-screen -z-[3] bg-black"/>
-    <div className="z-[2] w-full mx-auto relative mask-img-gradient-top py-[90px] flex flex-col justify-center items-center">
+    <div className="z-[2] w-full mx-auto relative mask-img-gradient-top py-[90px] flex flex-col justify-center items-center bg-black md:bg-transparent">
         <span className="w-full z-[2] text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span>
-        <div className="w-full z-[2] max-w-[1000px] px-10 h-auto mx-auto mt-10 relative">
+        <div className="w-full z-[2] max-w-[1000px] px-10 h-auto mx-auto mt-10 relative bg-black">
             <SwiperArticles />
         </div>
     </div>

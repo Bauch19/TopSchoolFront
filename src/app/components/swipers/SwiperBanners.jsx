@@ -29,7 +29,7 @@ export default function SwiperBanners(){
         clickable: true,
         dynamicBullets: true,
       }}
-      className='h-[170px] swiperBanner'
+      className='h-[170px] swiperBanner bg-black'
     >
       <SwiperSlide key={'banner-1'}>
         <Image 

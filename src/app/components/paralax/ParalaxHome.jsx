@@ -37,27 +37,15 @@ export default function ParalaxHome({ open, setOpen }){
     elements.forEach((element) => {
       const strength = parseInt(element.dataset.parallaxStrength, 10);
 
-      if (axes.x) {
-        const movementX = (mousePos.left - offsetWidth / 2) * strength / offsetWidth;
-        element.style.transform = `translateX(${movementX}px)`;
-      }
-
-      if (axes.y) {
-        const movementY = (mousePos.top - offsetHeight / 2) * strength / offsetHeight;
-        element.style.transform = `translateY(${movementY}px)`;
-      }
+      const movementX = (mousePos.left - offsetWidth / 2) * strength / offsetWidth;
+      const movementY = (mousePos.top - offsetHeight / 2) * strength / offsetHeight;
+      element.style.transform = `translate(${movementX}px, ${movementY}px)`;
     });
   };
 
   const handleDataParallaxAxe = () => {
     const dataParallaxAxe = containerRef.current?.dataset.parallaxAxe;
-    if (dataParallaxAxe === 'x') {
-      setAxes({ x: true, y: false });
-    } else if (dataParallaxAxe === 'y') {
-      setAxes({ x: false, y: true });
-    } else {
-      setAxes({ x: true, y: true });
-    }
+    setAxes({ x: true, y: true });
   };
 
   useEffect(() => {
@@ -65,7 +53,16 @@ export default function ParalaxHome({ open, setOpen }){
   }, [containerRef]);
 
   return (
-    <div ref={containerRef} className="parallax-mouse bg-[url(/bg-home.jpg)] bg-no-repeat h-screen bg-center bg-cover pt-20 md:py-20 relative felx flex-col justify-between gap-10 items-center" onMouseMove={handleMouseMove}>
+    <div ref={containerRef} className="parallax-mouse h-screen overflow-hidden bg-[url(/bg-home.jpg)] !backdrop-blur-lg bg-center bg-cover w-full pt-20 md:py-20 relative felx flex-col justify-center gap-10 items-center" onMouseMove={handleMouseMove}>
+      <Image 
+        src={'/bg-home.jpg'}
+        alt="titulo"
+        fill
+        priority
+        quality={100}
+        className="w-full h-full z-0 parallax-element object-cover object-center"
+        data-parallax-strength="50"
+      />
       <Image 
         src={'/logo-guia.png'}
         alt="titulo"
@@ -73,14 +70,14 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[700px] mx-auto px-5 h-auto z-[1] parallax-element top-4"
-        data-parallax-strength="30"
+        className="w-full max-w-[700px] mx-auto px-5 h-auto z-0 parallax-element top-4"
+        data-parallax-strength="80"
       />
-      <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center parallax-element top-10" data-parallax-strength="60">
+      <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center parallax-element top-10" data-parallax-strength="30">
         DONDE ENCONTRAR LA<br /> MEJOR OFERTA EDUCATIVA
       </p>
-      <div className='w-full max-w-fit mx-auto parallax-element top-20 mt-7' data-parallax-strength="80">
-        <Button onClick={() => setOpen(true)}>
+      <div className='w-full max-w-fit mx-auto mt-7'>
+        <Button onClick={() => setOpen(true)} className={'!z-10'}>
           Suscribete
         </Button>
       </div>
@@ -91,8 +88,8 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[500px] mx-auto px-5 h-auto z-[1] parallax-element bottom-0"
-        data-parallax-strength="100"
+        className="w-full max-w-[500px] px-5 h-auto z-0 parallax-element md:absolute left-1/3 -translate-x-1/3 md:-bottom-[10%]"
+        data-parallax-strength="200"
       />
     </div>
   );
