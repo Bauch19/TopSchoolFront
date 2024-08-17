@@ -4,6 +4,7 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
+import { Icons } from "@/components/Icons";
 import { useState, useRef } from "react";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 const Button = dynamic(() => import('@/app/components/buttons/Button'));
@@ -22,7 +23,10 @@ export default function Home() {
 
   return (
     <>
-    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-full h-screen object-cover object-center -z-[3] brightness-75 fixed" />
+    <motion.button className={'z-50 hidden md:fixed right-4 bottom-4 p-5 rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+      <Icons.Notebook className={'size-10'} />
+    </motion.button>
+    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-screen h-screen object-cover object-center -z-[3] brightness-75 fixed" />
     <main className="relative z-[1] w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">

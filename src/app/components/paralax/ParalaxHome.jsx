@@ -64,15 +64,17 @@ export default function ParalaxHome({ open, setOpen }){
         className="w-full h-full z-0 parallax-element object-cover object-center"
         data-parallax-strength="50"
       />
-      <Image 
-        src={'/logo-guia.png'}
-        alt="titulo"
-        width={960}
-        height={540}
-        priority
-        quality={100}
-        className="w-full max-w-[700px] mx-auto px-5 h-auto z-0 top-4"
-      />
+      <div className='w-full h-20 mt-20 relative'>
+        <Image 
+          src={'/logo-guia.png'}
+          alt="titulo guia"
+          width={960}
+          height={540}
+          priority
+          quality={75}
+          className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
+        />
+      </div>
       <div className='flex flex-col gap-1'>
         <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
           DONDE ENCONTRAR LA
