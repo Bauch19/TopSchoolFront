@@ -65,9 +65,7 @@ export default function BackGalaxy(){
             fetchPriority="high"
             className="w-full h-[120vh] absolute top-0 mask-img-gradient bg-black -z-[1] object-cover object-center lg:hidden"
         />
-        <div className="wrappers w-full h-full relative pt-20 z-[2]">
-            {/* <div class="stars"></div> */}
-        </div>
+        <div className="wrappers w-full h-full relative pt-20 z-[2]" />
     </div>
     <div className="absolute w-full h-screen -z-[3] bg-black"/>
     <div className="z-[2] w-full mx-auto relative mask-img-gradient-top py-[90px] flex flex-col justify-center items-center bg-black xl:bg-transparent">

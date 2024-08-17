@@ -13,8 +13,7 @@ const SwiperPeople = dynamic(() => import('@/app/components/swipers/SwiperPeople
 const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 const ModalContact = dynamic(() => import('@/app/components/modals/ModalContact'));
 const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
-import ParticleCanvas from "./components/particles/ParticleCanvas";
-import ParticlesJs from "./components/particles/ParticlesJs";
+const ParallaxText = dynamic(() => import('@/app/components/paralax/ParallaxText'));
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -37,7 +36,8 @@ export default function Home() {
             fetchPriority="high"
             className="w-full max-w-[300px] h-auto !z-[3]"
           />
-          <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center !z-10 gap-0 mt-4">
+          <ParallaxText />
+          {/* <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center !z-10 gap-0 mt-4">
             <p className="uppercase text-white text-[25px] md:text-[40px] font-[200] w-full text-left">
               El poder del
             </p>
@@ -47,7 +47,7 @@ export default function Home() {
             <p className="uppercase text-white text-[25px] md:text-[40px] font-[200] -mt-4 md:-mt-8 w-full text-right">
               en la infancia
             </p>
-          </div>
+          </div> */}
           <Image 
             src={'/boys.png'}
             alt="principal"
@@ -76,7 +76,7 @@ export default function Home() {
           height={540}
           priority
           quality={100}
-          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] py-20 md:py-0 xl:py-20 h-auto z-[1]"
+          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
         <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto absolute top-1/2 -translate-y-1/2">
           Las mejores opiniones<br /> educativas del país
@@ -93,7 +93,9 @@ export default function Home() {
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
-      <div className="w-full h-[60px] bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat" />
+      <div className="w-full h-[60px] overflow-hidden relative bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat">
+        <Image src={'/bg-gold.jpg'} alt="bg-gold" fill className="z-[1] w-full h-fit"/>
+      </div>
       <section className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
         <div className="flex justify-center items-center">
           <Image 
