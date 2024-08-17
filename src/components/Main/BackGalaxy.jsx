@@ -66,7 +66,7 @@ export default function BackGalaxy(){
         />
         <div className="wrappers w-full h-full relative py-20 z-[2]" />
     </div>
-    <div className="absolute w-full h-screen xl:h-[150vh] -z-[3] bg-black "/>
+    <div className="absolute w-full h-screen xl:h-[150vh] 2xl:h-screen -z-[3] bg-black "/>
     <div className="z-[2] w-full h-fit mx-auto relative mask-img-gradient-top pt-[120px] flex flex-col gap-10 justify-center items-center bg-black xl:bg-transparent mt-[120px]">
         <TextAnimation className="w-full z-[2] text-white flex uppercase font-bold tracking-[5px] text-[24px] text-center transition justify-center items-center">
             Lo más leído
