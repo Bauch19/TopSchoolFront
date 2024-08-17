@@ -2,10 +2,9 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import SwiperArticles from "./SwiperArticles";
-import Particles from "react-particles";
-import particlesConfig from "./config/particles-config";
 import "./style.css";
 import ParticlesJs from "@/app/components/particles/ParticlesJs";
+import TextAnimation from '@/app/components/texts/TextAnimation';
 
 export default function BackGalaxy(){
     return(<>
@@ -65,12 +64,15 @@ export default function BackGalaxy(){
             fetchPriority="high"
             className="w-full h-[120vh] absolute top-0 mask-img-gradient bg-black -z-[1] object-cover object-center lg:hidden"
         />
-        <div className="wrappers w-full h-full relative pt-20 z-[2]" />
+        <div className="wrappers w-full h-full relative py-20 z-[2]" />
     </div>
-    <div className="absolute w-full h-screen -z-[3] bg-black"/>
-    <div className="z-[2] w-full mx-auto relative mask-img-gradient-top py-[90px] flex flex-col justify-center items-center bg-black xl:bg-transparent">
-        <span className="w-full z-[2] text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span>
-        <div className="w-full z-[2] max-w-[1000px] px-10 h-auto mx-auto mt-10 relative bg-black">
+    <div className="absolute w-full h-screen xl:h-[150vh] -z-[3] bg-black "/>
+    <div className="z-[2] w-full h-fit mx-auto relative mask-img-gradient-top pt-[120px] flex flex-col gap-10 justify-center items-center bg-black xl:bg-transparent mt-[120px]">
+        <TextAnimation className="w-full z-[2] text-white flex uppercase font-bold tracking-[5px] text-[24px] text-center transition justify-center items-center">
+            Lo más leído
+        </TextAnimation>
+        {/* <span className="w-full z-[2] text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span> */}
+        <div className="w-full z-[2] max-w-[1000px] px-10 h-auto mx-auto relative bg-black">
             <SwiperArticles />
         </div>
     </div>

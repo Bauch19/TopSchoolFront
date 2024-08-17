@@ -14,6 +14,7 @@ const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 const ModalContact = dynamic(() => import('@/app/components/modals/ModalContact'));
 const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
 const ParallaxText = dynamic(() => import('@/app/components/paralax/ParallaxText'));
+const TextAnimation = dynamic(() => import('@/app/components/texts/TextAnimation'));
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -37,17 +38,6 @@ export default function Home() {
             className="w-full max-w-[300px] h-auto !z-[3]"
           />
           <ParallaxText />
-          {/* <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center !z-10 gap-0 mt-4">
-            <p className="uppercase text-white text-[25px] md:text-[40px] font-[200] w-full text-left">
-              El poder del
-            </p>
-            <span className="text-white uppercase text-[45px] md:text-[80px] -mt-4 md:-mt-8 text-center font-bold">
-              Mindfulness
-            </span>
-            <p className="uppercase text-white text-[25px] md:text-[40px] font-[200] -mt-4 md:-mt-8 w-full text-right">
-              en la infancia
-            </p>
-          </div> */}
           <Image 
             src={'/boys.png'}
             alt="principal"
@@ -63,7 +53,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="w-full h-fit bg-black pb-[120px]">
+      <div className="w-full h-fit bg-black py-[120px]">
         <div className="w-full max-w-[1000px] mx-auto h-fit px-5 z-[3] bg-black">
           <SwiperBanners />
         </div>
@@ -78,16 +68,23 @@ export default function Home() {
           quality={100}
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
-        <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto absolute top-1/2 -translate-y-1/2">
-          Las mejores opiniones<br /> educativas del país
+        <div className="w-fit h-fit absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
+          <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
+            Las mejores opiniones
+          </TextAnimation>
+          <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
+            educativas del país
+          </TextAnimation>
         </div>
         <SwiperPeople />
         <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-transparent absolute -bottom-[170px]">
           <SwiperBanners />
         </div>
       </section>
-      <section className="bg-transparent flex flex-col justify-center gap-10 lg:gap-20 py-20 items-center">
-        <h3 className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10">Lo más top</h3>
+      <section className="bg-transparent flex flex-col justify-center gap-10 py-20 items-center">
+        <TextAnimation className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10 flex justify-center items-center">
+          Lo más top
+        </TextAnimation>
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative mb-10">
           <SwiperTop />
         </div>

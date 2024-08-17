@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Button from "../buttons/Button";
+import TextAnimation from '@/app/components/texts/TextAnimation';
 
 export default function ParalaxHome({ open, setOpen }){
   const containerRef = useRef(null);
@@ -73,9 +74,14 @@ export default function ParalaxHome({ open, setOpen }){
         className="w-full max-w-[700px] mx-auto px-5 h-auto z-0 parallax-element top-4"
         data-parallax-strength="80"
       />
-      <p className="text-white uppercase text-xl font-semibold tracking-[5px] text-center parallax-element top-10" data-parallax-strength="30">
-        DONDE ENCONTRAR LA<br /> MEJOR OFERTA EDUCATIVA
-      </p>
+      <div className='flex flex-col gap-1 parallax-element top-10' data-parallax-strength="30">
+        <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
+          DONDE ENCONTRAR LA
+        </TextAnimation>
+        <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
+          MEJOR OFERTA EDUCATIVA
+        </TextAnimation>
+      </div>
       <div className='w-full max-w-fit mx-auto mt-7'>
         <Button onClick={() => setOpen(true)} className={'!z-10'}>
           Suscribete
