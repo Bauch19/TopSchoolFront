@@ -76,12 +76,12 @@ const ParallaxText = () => {
       }, []);
 
   return (
-    <div ref={mainRef} className="w-full max-w-fit mx-auto h-fit flex transition flex-col justify-center items-center !z-10 gap-0 mt-4 pt-20">
+    <div ref={mainRef} className="w-full max-w-fit mx-auto h-fit flex transition flex-col justify-center items-center !z-10 gap-4 ">
       <p className="uppercase text-white text-[25px] transition md:text-[40px] font-[200] w-full text-left">
         El poder del
       </p>
       <div ref={headerContainerRef}>
-        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[80px] transition -mb-10 flex items-center text-center font-bold">
+        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[80px] transition flex items-center text-center font-bold">
             {/* Mindfulness */}
             <div ref={el => pwItemsRef.current[0] = el} className="pw-item pw-item-1" data-shift="-0.25">
               <div className="pw-letter h-image">
