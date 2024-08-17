@@ -95,7 +95,7 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[500px] px-5 h-auto z-0 parallax-element md:absolute left-1/3 -translate-x-1/3 md:-bottom-[10%]"
+        className="w-full max-w-[500px] 2xl:max-w-[800px] px-5 h-auto z-0 parallax-element md:absolute left-1/3 -translate-x-1/3 md:-bottom-[10%]"
         data-parallax-strength="200"
       />
     </div>
