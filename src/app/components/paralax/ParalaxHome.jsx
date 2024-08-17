@@ -71,10 +71,9 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[700px] mx-auto px-5 h-auto z-0 parallax-element top-4"
-        data-parallax-strength="80"
+        className="w-full max-w-[700px] mx-auto px-5 h-auto z-0 top-4"
       />
-      <div className='flex flex-col gap-1 parallax-element top-10' data-parallax-strength="30">
+      <div className='flex flex-col gap-1'>
         <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
           DONDE ENCONTRAR LA
         </TextAnimation>
