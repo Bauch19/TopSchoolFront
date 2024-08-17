@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Icons } from "@/components/Icons";
 
 export default function Footer(){
@@ -14,10 +15,22 @@ export default function Footer(){
         />
       </div>
       <div className="flex items-center gap-2">
-        <Icons.Instagram className={'size-6 text-white'}/>
-        <Icons.FacebookFill className={'size-6 text-white'}/>
-        <Icons.YouTubeFill className={'size-6 text-white'}/>
-        <Icons.TikTokFill className={'size-6 text-white'}/>
+        <LinkButton 
+          url={'https://www.instagram.com'}
+          icon={<Icons.Instagram className={'size-6'}/>}
+        />
+        <LinkButton 
+          url={'https://www.facebook.com'}
+          icon={<Icons.FacebookFill className={'size-6'}/>}
+        />
+        <LinkButton 
+          url={'https://www.youtube.com'}
+          icon={<Icons.YouTubeFill className={'size-6'}/>}
+        />
+        <LinkButton 
+          url={'https://www.tiktok.com'}
+          icon={<Icons.TikTokFill className={'size-6'}/>}
+        />
       </div>
       <hr className="w-full h-[1px] bg-white"/>
       <div className="w-full max-w-[1000px] mx-auto flex flex-col lg:flex-row justify-between items-start gap-5 text-sm py-10 px-5">
@@ -61,5 +74,22 @@ export default function Footer(){
         © 2024 TOP SCHOOL, LLC. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Service, Privacy Policy (Your Privacy Rights) and Do Not Sell or Share My Personal Information. TOP SCHOOL may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.
       </p>
     </section>
+  )
+}
+
+function LinkButton({  url, icon, ...res }){
+  return(
+    <motion.button
+      className="flex justify-center items-center p-2 rounded-full text-white hover:text-[#00a9e9] transition-all bg-opacity-50 hover:bg-[#002349] hover:backdrop-blur-lg"
+      onClick={() => {
+        window.open(
+          `${url}`,
+          '_blank'
+        );
+      }}
+      {...res}
+    >
+      {icon}
+    </motion.button>
   )
 }
