@@ -678,6 +678,11 @@ section {
   -webkit-mask-image: linear-gradient(#000 95%, transparent 100%);
 }
 
+.mask-img-gradient-top {
+  mask-image: linear-gradient(to top, #000 98%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, #000 98%, transparent 100%);
+}
+
 .swiperTop .swiper-wrapper .swiper-slide{
   transition: all 0.5s;
 }
@@ -714,10 +719,16 @@ section {
     display: block;
   }
 }
+
 .parallax-mouse div .parallax-element{
   position: relative;
 
   @media (min-width: 768px) {
     position: absolute;
   }
+}
+
+#particles{
+  position: absolute;
+  top: 0px;
 }

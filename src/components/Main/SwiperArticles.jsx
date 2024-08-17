@@ -60,11 +60,11 @@ export default function SwiperArticles(){
                 slidesPerView: 4,
             },
         }}
-        className='h-fit my-5'
+        className='h-fit my-5 !z-[3]'
     >
         {arrayAux?.map((item, index) => (
             <>
-            <SwiperSlide key={'item-1'+index} className='text-white h-fit w-full'>
+            <SwiperSlide key={'item-1'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
                         src={'/articulos/ARTI-02.png'}
@@ -78,7 +78,7 @@ export default function SwiperArticles(){
                 <span className='text-white uppercase font-bold py-3'>Rinocerontes</span>
                 <p className='uppercase text-xs'>Vive la verdadera experiencia en africam safari</p>
             </SwiperSlide>
-            <SwiperSlide key={'item-2'+index} className='text-white h-fit w-full'>
+            <SwiperSlide key={'item-2'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
                         src={'/articulos/ARTI-03.png'}
@@ -92,7 +92,7 @@ export default function SwiperArticles(){
                 <span className='text-white uppercase font-bold py-3'>Back to School</span>
                 <p className='uppercase text-xs'>Office Depot los mejores descuentos</p>
             </SwiperSlide>
-            <SwiperSlide key={'item-3'+index} className='text-white h-fit w-full'>
+            <SwiperSlide key={'item-3'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
                         src={'/articulos/ARTI-04.png'}
@@ -106,7 +106,7 @@ export default function SwiperArticles(){
                 <span className='text-white uppercase font-bold py-3'>Entrevista con ...</span>
                 <p className='uppercase text-xs'>Cristian Carabias libre como el viento</p>
             </SwiperSlide>
-            <SwiperSlide key={'item-4'+index} className='text-white h-fit w-full'>
+            <SwiperSlide key={'item-4'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
                         src={'/articulos/ARTI-05.png'}

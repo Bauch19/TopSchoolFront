@@ -14,6 +14,7 @@ const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 const ModalContact = dynamic(() => import('@/app/components/modals/ModalContact'));
 const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
 import ParticleCanvas from "./components/particles/ParticleCanvas";
+import ParticlesJs from "./components/particles/ParticlesJs";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -21,9 +22,8 @@ export default function Home() {
 
   return (
     <>
-    <ParticleCanvas />
-    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-full h-screen object-cover object-center z-0 brightness-75 fixed" />
-    <main className="relative z-0 w-[100vw] overflow-x-hidden bg-transparent">
+    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-full h-screen object-cover object-center -z-[3] brightness-75 fixed" />
+    <main className="relative z-[1] w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
         <div className="w-full h-full flex flex-col justify-between relative items-center py-5 bg-transparent">
@@ -35,9 +35,9 @@ export default function Home() {
             priority
             quality={100}
             fetchPriority="high"
-            className="w-full max-w-[300px] h-auto z-[1]"
+            className="w-full max-w-[300px] h-auto !z-[3]"
           />
-          <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center gap-0 mt-4">
+          <div className="w-full max-w-fit mx-auto h-fit flex flex-col justify-center items-center !z-10 gap-0 mt-4">
             <p className="uppercase text-white text-[40px] font-[200] w-full text-left">
               El poder del
             </p>
@@ -48,9 +48,6 @@ export default function Home() {
               en la infancia
             </p>
           </div>
-          {/* <h2 className="uppercase text-white text-[40px] text-center font-[200] w-[330px] leading-[40px] mt-2 z-[1]">
-            El poder del <span className="text-white font-bold">Mindfulness</span> en la infancia
-          </h2> */}
           <Image 
             src={'/boys.png'}
             alt="principal"
@@ -67,12 +64,11 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full h-fit bg-black pb-[120px]">
-        <div className="w-full max-w-[1000px] mx-auto h-fit px-5 bg-black">
+        <div className="w-full max-w-[1000px] mx-auto h-fit px-5 z-[3] bg-black">
           <SwiperBanners />
         </div>
       </div>
       <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
-        {/* <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="absolute w-full h-screen object-cover object-center z-0 brightness-75" /> */}
         <Image 
           src={'/logo-news.png'}
           alt="titulo"
@@ -128,7 +124,7 @@ export default function Home() {
       </section>
     </main>
     <Modal open={open} setOpen={setOpen} />
-    <ModalContact open={openContact} setOpen={setOpenContact} />
+    <ModalContact open={openContact} setOpen={setOpenContact} /> 
     </>
   );
 }
