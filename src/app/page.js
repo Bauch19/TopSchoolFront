@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
 const Button = dynamic(() => import('@/app/components/buttons/Button'));
-const People = dynamic(() => import('@/app/components/presentation/People'));
 const SwiperTop = dynamic(() => import('@/app/components/swipers/SwiperTop'));
 const SwiperBanners = dynamic(() => import('@/app/components/swipers/SwiperBanners'));
+const SwiperPeople = dynamic(() => import('@/app/components/swipers/SwiperPeople'));
 const Modal = dynamic(() => import('@/app/components/modals/Modal'));
 const ModalContact = dynamic(() => import('@/app/components/modals/ModalContact'));
 const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
@@ -68,7 +68,7 @@ export default function Home() {
           <SwiperBanners />
         </div>
       </div>
-      <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center">
+      <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center py-20 md:py-10 xl:py-20">
         <Image 
           src={'/logo-news.png'}
           alt="titulo"
@@ -76,28 +76,12 @@ export default function Home() {
           height={540}
           priority
           quality={100}
-          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] my-20 h-auto z-[1]"
+          className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] py-20 md:py-0 xl:py-20 h-auto z-[1]"
         />
-        <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto">
+        <div className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto absolute top-1/2 -translate-y-1/2">
           Las mejores opiniones<br /> educativas del país
         </div>
-        <div className="w-full max-w-[1000px] flex justify-between items-center px-5 absolute bottom-0">
-          <People 
-            src={'/people/persona-1.png'}
-            name={'Dana'}
-            lastName={'Stevens'}
-          />
-          <People 
-            src={'/people/persona-2.png'}
-            name={'Rebeca'}
-            lastName={'Hadid'}
-          />
-          <People 
-            src={'/people/persona-3.png'}
-            name={'Jordi'}
-            lastName={'Soler'}
-          />
-        </div>
+        <SwiperPeople />
         <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-transparent absolute -bottom-[170px]">
           <SwiperBanners />
         </div>
