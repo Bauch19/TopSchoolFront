@@ -4,7 +4,7 @@
 import { UserContextProvider } from '@/context/userContext';
 import React from 'react'
 // import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 import { PrimeReactProvider } from 'primereact/api';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
@@ -15,7 +15,7 @@ export default function NestedLayout({ children }) {
         <ParallaxProvider>
           {/* <Header /> */}
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </ParallaxProvider>
       </UserContextProvider>
     </PrimeReactProvider>

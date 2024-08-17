@@ -93,18 +93,7 @@ export default function Home() {
       <div className="w-full h-[60px] overflow-hidden relative bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat">
         <Image src={'/bg-gold.jpg'} alt="bg-gold" fill className="z-[1] w-full h-fit"/>
       </div>
-      <section className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] relative flex flex-col justify-center items-center">
-        <div className="flex justify-center items-center">
-          <Image 
-            src={'/logo-white.png'}
-            width={500}
-            height={100}
-            priority quality={75}
-            className="w-full max-w-[150px] my-10 h-auto"
-          />
-        </div>
-        <hr className="w-full h-[1px] bg-white"/>
-      </section>
+      
     </main>
     <Modal open={open} setOpen={setOpen} />
     <ModalContact open={openContact} setOpen={setOpenContact} /> 
