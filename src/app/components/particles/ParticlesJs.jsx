@@ -353,8 +353,8 @@ const ParticlesJs = (props) => {
         },
         size: {
           value: {
-            min: 1,
-            max: 3
+            min: 2,
+            max: 4
           },
           animation: {
             count: 0,
