@@ -14,41 +14,14 @@ const ParallaxText = () => {
     useEffect(() => {
         const winH = 200;
     
-        // const timeline = gsap.timeline({ repeat: -1, yoyo: true });
-    
-        // Main parallax effect
-        gsap.to(mainRef.current, {
-            y: -20,
-            ease: "none",
-            scrollTrigger: {
-                trigger: mainRef.current,
-                start: "top top",
-                end: `+=${20}`,
-                scrub: true,
-            },
-        });
-    
-        // Image opacity effect
-        gsap.to(tercerRef.current, {
-            y: -25,
-            ease: "none",
-            duration: 2,
-            scrollTrigger: {
-                trigger: mainRef.current,
-                start: "top top",
-                end: `+=${25}`,
-                scrub: true,
-            },
-        });
-    
         // Parallax word movement
         gsap.to(parallaxWordRef.current, {
-            y: -winH / 5,
+            y: 0,
             ease: "none",
             scrollTrigger: {
                 trigger: mainRef.current,
                 start: "top top",
-                end: `+=${winH / 10}`,
+                end: `+=${winH / 100}`,
                 scrub: true,
             },
         }, "-=10");
@@ -59,14 +32,14 @@ const ParallaxText = () => {
     
           gsap.fromTo(
             item,
-            { y: shiftH * winH / 2 },
+            { y: 0 },
             {
-                y: 0,
+                y: shiftH * winH / 2,
                 ease: "none",
                 scrollTrigger: {
                     trigger: mainRef.current,
                     start: "top top",
-                    end: `+=${winH / 2}`,
+                    end: `+=${winH / 20}`,
                     scrub: true,
                 },
             },
