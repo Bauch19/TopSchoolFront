@@ -16,6 +16,8 @@ const ModalContact = dynamic(() => import('@/app/components/modals/ModalContact'
 const ParalaxHome = dynamic(() => import('@/app/components/paralax/ParalaxHome'));
 const ParallaxText = dynamic(() => import('@/app/components/paralax/ParallaxText'));
 const TextAnimation = dynamic(() => import('@/app/components/texts/TextAnimation'));
+const TextAnimation3 = dynamic(() => import('@/app/components/texts/TextAnimation3'));
+const TextAnimation4 = dynamic(() => import('@/app/components/texts/TextAnimation4'));
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -26,7 +28,7 @@ export default function Home() {
     <motion.button whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'z-50 hidden md:block fixed right-4 bottom-4 p-5 rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
       <Icons.Notebook className={'size-10'} />
     </motion.button>
-    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted className="w-screen h-screen object-cover object-center -z-[3] brightness-75 fixed" />
+    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] scale-x-[-1] brightness-75 fixed" />
     <main className="relative z-[1] w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
@@ -73,12 +75,14 @@ export default function Home() {
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
         <div className="w-fit h-fit absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
-          <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
+          {/* <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
             Las mejores opiniones
           </TextAnimation>
           <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
             educativas del país
-          </TextAnimation>
+          </TextAnimation> */}
+          <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
+          <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
         </div>
         <SwiperPeople />
         <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-transparent absolute -bottom-[170px]">
@@ -86,9 +90,9 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-transparent flex flex-col justify-center gap-10 py-20 items-center">
-        <TextAnimation className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10 flex justify-center items-center">
+        {/* <TextAnimation className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10 flex justify-center items-center">
           Lo más top
-        </TextAnimation>
+        </TextAnimation> */}
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative mb-10">
           <SwiperTop />
         </div>

@@ -39,7 +39,7 @@ const ParallaxText = () => {
                 scrollTrigger: {
                     trigger: mainRef.current,
                     start: "top top",
-                    end: `+=${winH / 20}`,
+                    end: `+=${2}`,
                     scrub: true,
                 },
             },
@@ -56,57 +56,57 @@ const ParallaxText = () => {
       <div ref={headerContainerRef}>
         <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[80px] transition flex items-center text-center font-bold">
             {/* Mindfulness */}
-            <div ref={el => pwItemsRef.current[0] = el} className="pw-item pw-item-1" data-shift="-0.25">
+            <div ref={el => pwItemsRef.current[0] = el} className="transition" data-shift="-0.25">
               <div className="pw-letter h-image">
                 <span className="symbol">M</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[1] = el} className="pw-item pw-item-2" data-shift="0.15">
+            <div ref={el => pwItemsRef.current[1] = el} className="transition" data-shift="0.15">
               <div className="pw-letter h-image">
                 <span className="symbol">i</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[2] = el} className="pw-item pw-item-3" data-shift="-0.3">
+            <div ref={el => pwItemsRef.current[2] = el} className="transition" data-shift="-0.3">
               <div className="pw-letter h-image">
                 <span className="symbol">n</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[3] = el} className="pw-item pw-item-4" data-shift="0">
+            <div ref={el => pwItemsRef.current[3] = el} className="transition" data-shift="0">
               <div className="pw-letter h-image">
                 <span className="symbol">d</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[4] = el} className="pw-item pw-item-5" data-shift="-0.35">
+            <div ref={el => pwItemsRef.current[4] = el} className="transition" data-shift="-0.35">
               <div className="pw-letter h-image">
                 <span className="symbol">f</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[5] = el} className="pw-item pw-item-6" data-shift="0.15">
+            <div ref={el => pwItemsRef.current[5] = el} className="transition" data-shift="0.15">
               <div className="pw-letter h-image">
                 <span className="symbol">u</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[6] = el} className="pw-item pw-item-7" data-shift="-0.25">
+            <div ref={el => pwItemsRef.current[6] = el} className="transition" data-shift="-0.25">
               <div className="pw-letter h-image">
                 <span className="symbol">l</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[7] = el} className="pw-item pw-item-8" data-shift="0.15">
+            <div ref={el => pwItemsRef.current[7] = el} className="transition" data-shift="0.15">
               <div className="pw-letter h-image">
                 <span className="symbol">n</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[8] = el} className="pw-item pw-item-9" data-shift="-0.3">
+            <div ref={el => pwItemsRef.current[8] = el} className="transition" data-shift="-0.3">
               <div className="pw-letter h-image">
                 <span className="symbol">e</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[9] = el} className="pw-item pw-item-10" data-shift="0">
+            <div ref={el => pwItemsRef.current[9] = el} className="transition" data-shift="0">
               <div className="pw-letter h-image">
                 <span className="symbol">s</span>
               </div>
             </div>
-            <div ref={el => pwItemsRef.current[10] = el} className="pw-item pw-item-11" data-shift="-0.35">
+            <div ref={el => pwItemsRef.current[10] = el} className="transition" data-shift="-0.35">
               <div className="pw-letter h-image">
                 <span className="symbol">s</span>
               </div>
