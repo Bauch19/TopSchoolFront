@@ -718,7 +718,7 @@ section {
 .parallax-mouse{
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: none;
   position: relative;
   overflow: hidden;
 

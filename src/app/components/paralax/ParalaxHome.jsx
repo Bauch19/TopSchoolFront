@@ -53,8 +53,8 @@ export default function ParalaxHome({ open, setOpen }){
     handleDataParallaxAxe();
   }, [containerRef]);
 
-  return (
-    <div ref={containerRef} className="parallax-mouse h-screen overflow-hidden bg-[url(/bg-home.jpg)] !backdrop-blur-lg bg-center bg-cover w-full pt-20 md:py-20 relative felx flex-col justify-center gap-10 items-center" onMouseMove={handleMouseMove}>
+  return (<>
+    <div ref={containerRef} className="parallax-mouse h-screen overflow-hidden bg-[url(/bg-home.jpg)] !backdrop-blur-lg bg-center bg-cover w-full pt-20 md:py-20 relative hidden lg:block flex-col justify-center gap-10 items-center" onMouseMove={handleMouseMove}>
       <Image 
         src={'/bg-home.jpg'}
         alt="titulo"
@@ -99,5 +99,40 @@ export default function ParalaxHome({ open, setOpen }){
         data-parallax-strength="200"
       />
     </div>
-  );
+    <div className="h-screen overflow-hidden bg-[url(/bg-home.jpg)] !backdrop-blur-lg bg-center bg-cover w-full pt-20 md:py-20 relative lg:hidden">
+      <div className='w-full h-20 mt-20 relative'>
+        <Image 
+          src={'/logo-guia.png'}
+          alt="titulo guia"
+          width={960}
+          height={540}
+          priority
+          quality={75}
+          className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
+        />
+      </div>
+      <div className='flex flex-col gap-1'>
+        <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
+          DONDE ENCONTRAR LA
+        </TextAnimation>
+        <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
+          MEJOR OFERTA EDUCATIVA
+        </TextAnimation>
+      </div>
+      <div className='w-full max-w-fit mx-auto mt-7'>
+        <Button onClick={() => setOpen(true)} className={'!z-10'}>
+          Suscribete
+        </Button>
+      </div>
+      <Image 
+        src={'/people/guia-img.png'}
+        alt="personas"
+        width={960}
+        height={540}
+        priority
+        quality={100}
+        className="w-full max-w-[500px] 2xl:max-w-[800px] px-5 h-auto z-0 absolute bottom-0"
+      />
+    </div>
+  </>);
 }
