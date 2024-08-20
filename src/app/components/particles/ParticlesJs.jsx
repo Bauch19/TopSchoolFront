@@ -66,7 +66,7 @@ const ParticlesJs = (props) => {
             enable: true,
             mode: "bubble",
             parallax: {
-              enable: true,
+              enable: false,
               force: 2,
               smooth: 10
             }
