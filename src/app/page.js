@@ -20,6 +20,7 @@ const ParallaxText = dynamic(() => import('@/app/components/paralax/ParallaxText
 const TextAnimation = dynamic(() => import('@/app/components/texts/TextAnimation'));
 const TextAnimation3 = dynamic(() => import('@/app/components/texts/TextAnimation3'));
 const TextAnimation4 = dynamic(() => import('@/app/components/texts/TextAnimation4'));
+const MarqueeAnimation = dynamic(() => import('@/app/components/marquee/MarqueeAnimation'));
 
 const HtmlTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -121,10 +122,13 @@ export default function Home() {
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
-      <div className="w-full h-[60px] overflow-hidden relative bg-[url(/bg-gold.jpg)] bg-cover bg-center bg-no-repeat">
-        <Image src={'/bg-gold.jpg'} alt="bg-gold" fill className="z-[1] w-full h-fit"/>
+      <div className="w-full h-[100px] overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat brightness-75">
       </div>
-      
+      <div className="absolute -mt-[100px]">
+        <MarqueeAnimation>
+          proxima edición noviembre - diciembre <Icons.StartFill className={'size-7'} /> revista digital proximamente <Icons.StartFill className={'size-7'} />
+        </MarqueeAnimation>
+      </div>
     </main>
     <Modal open={open} setOpen={setOpen} />
     <ModalContact open={openContact} setOpen={setOpenContact} /> 
