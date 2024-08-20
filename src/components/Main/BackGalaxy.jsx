@@ -16,7 +16,7 @@ export default function BackGalaxy(){
             transition={{ 
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 120,
+                duration: 240,
                 ease: "linear",
             }}
             className="hidden lg:block absolute !-z-[1] w-full h-full brightness-90"
