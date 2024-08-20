@@ -2,14 +2,16 @@ import Image from "next/image"
 
 export default function People({src, name, lastName, ...res}){
     return(
-        <div className="w-[240px] relative flex justify-center items-end" {...res}>
-            <Image 
-                src={src}
-                width={200}
-                height={307}
-                className="w-fit h-fit object-cover"
-            />
-            <p className="text-white absolute font-[200] text-sm top-1/4 right-0">
+        <div className="w-[240px] relative flex flex-col justify-center items-center gap-2" {...res}>
+            <div className="rounded-full w-[200px] h-[200px] overflow-hidden">
+                <Image 
+                    src={src}
+                    width={200}
+                    height={307}
+                    className="w-fit h-fit object-cover"
+                />
+            </div>
+            <p className="text-white font-[200] text-sm text-center">
                 <b className="font-bold block">{name}</b> {lastName}
             </p>
         </div>
