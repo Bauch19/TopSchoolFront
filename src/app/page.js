@@ -3,6 +3,8 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { styled } from '@mui/material/styles';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { motion, AnimatePresence } from "framer-motion";
 import { Icons } from "@/components/Icons";
 import { useState, useRef } from "react";
@@ -19,15 +21,36 @@ const TextAnimation = dynamic(() => import('@/app/components/texts/TextAnimation
 const TextAnimation3 = dynamic(() => import('@/app/components/texts/TextAnimation3'));
 const TextAnimation4 = dynamic(() => import('@/app/components/texts/TextAnimation4'));
 
+const HtmlTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: '#f5f5f9',
+    color: 'rgba(0, 0, 0, 0.87)',
+    maxWidth: 220,
+    fontSize: theme.typography.pxToRem(12),
+    border: '1px solid #dadde9',
+  },
+}));
+
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [openContact, setOpenContact] = useState(false);
 
   return (
     <>
-    <motion.button whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'z-50 hidden md:block fixed right-4 bottom-4 p-5 rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
-      <Icons.Notebook className={'size-10'} />
-    </motion.button>
+    <div className="w-fit h-fit z-50 fixed right-4 bottom-4 flex flex-col gap-5">
+    <HtmlTooltip arrow placement="top-start" title={<div className="text-xl">Suscribete</div>}>
+      <motion.button whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+        <Icons.Notification className={'size-7 md:size-10 text-white'} />
+      </motion.button>
+    </HtmlTooltip>
+    <HtmlTooltip arrow placement="top-start" title={<div className="text-xl">Leer revista</div>}>
+      <motion.button whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+        <Icons.Notebook className={'size-7 md:size-10 text-white'} />
+      </motion.button>
+    </HtmlTooltip>
+    </div>
     <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] scale-x-[-1] brightness-75 fixed" />
     <main className="relative z-[1] w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
