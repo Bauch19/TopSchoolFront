@@ -85,16 +85,16 @@ export default function Home() {
           <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
         </div>
         <SwiperPeople />
-        <div className="w-full max-w-[1000px] mx-auto h-fit py-10 px-5 bg-transparent absolute -bottom-[170px]">
-          <SwiperBanners />
-        </div>
       </section>
       <section className="bg-transparent flex flex-col justify-center gap-10 py-20 items-center">
         {/* <TextAnimation className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10 flex justify-center items-center">
           Lo más top
         </TextAnimation> */}
-        <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative mb-10">
+        <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
           <SwiperTop />
+        </div>
+        <div className="w-full max-w-[1000px] mx-auto h-fit mt-20 -mb-5 px-5 bg-transparent">
+          <SwiperBanners />
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
