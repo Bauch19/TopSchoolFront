@@ -64,12 +64,7 @@ const ParticlesJs = (props) => {
           },
           onHover: {
             enable: true,
-            mode: "bubble",
-            parallax: {
-              enable: false,
-              force: 2,
-              smooth: 10
-            }
+            mode: "repulse",
           },
           resize: {
             delay: 0.5,
@@ -130,7 +125,7 @@ const ParticlesJs = (props) => {
             quantity: 2
           },
           repulse: {
-            distance: 400,
+            distance: 100,
             duration: 0.4,
             factor: 100,
             speed: 1,
@@ -241,68 +236,18 @@ const ParticlesJs = (props) => {
         },
         groups: {},
         move: {
-          angle: {
-            offset: 0,
-            value: 90
-          },
-          attract: {
-            distance: 200,
-            enable: false,
-            rotate: {
-              x: 3000,
-              y: 3000
-            }
-          },
-          center: {
-            x: 50,
-            y: 50,
-            mode: "percent",
-            radius: 0
-          },
-          decay: 0,
-          distance: {},
-          direction: "none",
-          drift: 0,
           enable: true,
-          gravity: {
-            acceleration: 9.81,
-            enable: false,
-            inverse: false,
-            maxSpeed: 50
-          },
-          path: {
-            clamp: true,
-            delay: {
-              value: 0
-            },
-            enable: false,
-            options: {}
-          },
-          outModes: {
-            default: "out",
-            bottom: "out",
-            left: "out",
-            right: "out",
-            top: "out"
-          },
-          random: false,
-          size: false,
-          speed: {
-            min: 0.1,
-            max: 1
-          },
-          spin: {
-            acceleration: 0,
-            enable: false
-          },
+          speed: 2,
+          direction: "none",
+          random: true,
           straight: false,
-          trail: {
+          out_mode: "out",
+          bounce: false,
+          attract: {
             enable: false,
-            length: 10,
-            fill: {}
-          },
-          vibrate: false,
-          warp: false
+            rotateX: 600,
+            rotateY: 1200
+          }
         },
         number: {
           density: {
@@ -517,7 +462,7 @@ const ParticlesJs = (props) => {
       style: {},
       themes: [],
       zLayers: 100,
-      name: "NASA",
+      name: "TOP SCHOOL",
       motion: {
         disable: false,
         reduce: {
