@@ -98,7 +98,7 @@ export default function Home() {
           quality={100}
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
-        <div className="w-fit h-fit mt-[120px] lg:mt-0 lg:absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
+        <div className="w-fit h-fit mt-[120px] lg:mt-0 xl:-mt-10 lg:absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
           <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
           <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
         </div>
