@@ -54,7 +54,7 @@ const ParallaxText = () => {
         El poder del
       </p>
       <div ref={headerContainerRef}>
-        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[140px] transition flex items-center text-center font-bold -my-7">
+        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[140px] transition flex items-center text-center font-bold lg:-my-7">
             {/* Mindfulness */}
             <div ref={el => pwItemsRef.current[0] = el} className="transition" data-shift="-0.25">
               <div className="pw-letter h-image">

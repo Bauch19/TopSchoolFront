@@ -76,7 +76,7 @@ export default function Home() {
             priority
             quality={100}
             fetchPriority="high"
-            className="w-full md:w-3/4 lg:w-[29%] h-auto z-0 -mt-10 mask-img-gradient-min brightness-[0.85] px-5"
+            className="w-full md:w-3/4 lg:w-[29%] h-auto z-0 lg:-mt-10 mask-img-gradient-min brightness-[0.85] px-5"
           />
           <Button className={'z-[1] absolute bottom-5'} onClick={() => setOpen(true)}>
             Saber más
@@ -98,7 +98,7 @@ export default function Home() {
           quality={100}
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
-        <div className="w-fit h-fit absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
+        <div className="w-fit h-fit mt-[120px] lg:mt-0 lg:absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
           <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
           <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
         </div>
@@ -113,11 +113,9 @@ export default function Home() {
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
-      <div className="w-full h-[100px] overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat brightness-75">
-      </div>
-      <div className="absolute -mt-[100px]">
+      <div className="w-full h-fit py-4 lg:py-10 overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat brightness-75">
         <MarqueeAnimation>
-          proxima edición noviembre - diciembre <Icons.StartFill className={'size-7'} /> revista digital proximamente <Icons.StartFill className={'size-7'} />
+          proxima edición noviembre - diciembre <Icons.StartFill className={'size-4 lg:size-7'} /> revista digital proximamente <Icons.StartFill className={'size-4 lg:size-7'} />
         </MarqueeAnimation>
       </div>
     </main>

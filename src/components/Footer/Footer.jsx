@@ -33,7 +33,7 @@ export default function Footer(){
         />
       </div>
       <hr className="w-full h-[1px] bg-white"/>
-      <div className="w-full max-w-[1000px] mx-auto flex flex-col lg:flex-row justify-between items-start gap-5 text-sm py-10 px-5">
+      <div className="w-full max-w-[1000px] mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-14 lg:gap-5 text-sm py-10 px-5">
         <div className="w-full h-fit flex gap-5 justify-center">
           <div className="flex flex-col gap-1 border-l border-white pl-3">
             <p>Cultura</p>
@@ -53,7 +53,7 @@ export default function Footer(){
             <p>Top Guía</p>
           </div>
         </div>
-        <div className="w-[500px] flex flex-col justify-center gap-5 items-start">
+        <div className="w-fit max-w-[500px] flex flex-col justify-center gap-5 items-start">
           <div className="flex gap-2 w-full items-start">
             <Icons.LocationFill className={'size-6 text-white'}/>
             <div className="flex flex-col gap-1 w-full">
@@ -70,7 +70,7 @@ export default function Footer(){
           </div>
         </div>
       </div>
-      <p className="text-white text-xs w-full text-center max-w-[1000px] mx-auto">
+      <p className="text-white text-xs w-full text-center max-w-[1000px] mx-auto px-5">
         © 2024 TOP SCHOOL, LLC. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Service, Privacy Policy (Your Privacy Rights) and Do Not Sell or Share My Personal Information. TOP SCHOOL may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.
       </p>
     </section>

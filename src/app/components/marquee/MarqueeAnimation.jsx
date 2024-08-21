@@ -40,7 +40,7 @@ export default function MarqueeAnimation({
     return (
       <div
         ref={containerRef}
-        className="w-full m-auto overflow-hidden font-bold text-[40px] pt-5 text-white brightness-110 capitalize"
+        className="w-full m-auto overflow-hidden font-bold text-[16px] lg:text-[40px] text-white brightness-110 capitalize"
       >
         <motion.div className="flex whitespace-nowrap" animate={controls}>
           {[...Array(repeatCount)].map((_, index) => (

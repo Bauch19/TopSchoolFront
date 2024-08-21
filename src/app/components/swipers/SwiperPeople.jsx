@@ -19,7 +19,7 @@ export default function SwiperPeople(){
   }
 
   return(<>
-  <div className="w-full max-w-[1000px] flex flex-col lg:flex-row justify-between items-center px-5 absolute bottom-0">
+  <div className="w-full h-fit max-w-[1000px] flex flex-col lg:flex-row justify-between items-center px-5 lg:absolute bottom-0 mt-10 lg:mt-0">
     <People 
       src={'/people/persona-1.png'}
       name={'Dana'}

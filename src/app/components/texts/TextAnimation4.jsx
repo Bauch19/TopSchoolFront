@@ -48,7 +48,7 @@ export default function TextAnimation4({ ...res }){
 
   return(
     <div ref={mainRef} {...res}>
-      <span ref={parallaxWordRef} className="text-white uppercase text-[30px] transition flex items-center text-center font-bold">
+      <span ref={parallaxWordRef} className="text-white uppercase text-[16px] lg:text-[30px] transition flex items-center text-center font-bold">
         <div ref={el => pwItemsRef.current[0] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
             <span className="symbol">E</span>
