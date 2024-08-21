@@ -53,6 +53,16 @@ export default function BackGalaxy(){
                     fetchPriority="high"
                     className="opacity-100 -z-[1] right-0 mask-img-gradient bg-black"
                 />
+                <Image 
+                    src={'/galaxy.webp'}
+                    alt="galaxia"
+                    width={1920}
+                    height={1080}
+                    priority
+                    quality={100}
+                    fetchPriority="high"
+                    className="opacity-100 -z-[1] right-0 scale-x-[-1] mask-img-gradient bg-black"
+                />
             </div>
         </motion.div>
         <Image 

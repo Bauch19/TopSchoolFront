@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Button from "../buttons/Button";
 import TextAnimation from '@/app/components/texts/TextAnimation';
+import TextAnimation5 from '@/app/components/texts/TextAnimation5';
+import TextAnimation6 from '@/app/components/texts/TextAnimation6';
 
 export default function ParalaxHome({ open, setOpen }){
   const containerRef = useRef(null);
@@ -75,13 +77,9 @@ export default function ParalaxHome({ open, setOpen }){
           className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
         />
       </div>
-      <div className='flex flex-col gap-1'>
-        <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
-          DONDE ENCONTRAR LA
-        </TextAnimation>
-        <TextAnimation className="text-white uppercase text-xl flex justify-center items-center font-semibold tracking-[5px] text-center">
-          MEJOR OFERTA EDUCATIVA
-        </TextAnimation>
+      <div className='flex flex-col gap-1 justify-center items-center my-2'>
+        <TextAnimation5 />
+        <TextAnimation6 />
       </div>
       <div className='w-full max-w-fit mx-auto mt-7'>
         <Button onClick={() => setOpen(true)} className={'!z-10'}>
