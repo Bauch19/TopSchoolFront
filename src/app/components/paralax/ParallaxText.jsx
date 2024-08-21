@@ -38,23 +38,23 @@ const ParallaxText = () => {
                 ease: "none",
                 scrollTrigger: {
                     trigger: mainRef.current,
-                    start: "top top",
-                    end: `+=${2}`,
+                    start: "-=100",
+                    end: `+=${0.2}`,
                     scrub: true,
                 },
             },
-            "-=10"
+            "-=1"
           );
         });
       }, []);
 
   return (
-    <div ref={mainRef} className="w-full max-w-fit mx-auto h-fit flex transition flex-col justify-center items-center !z-10 gap-4 ">
+    <div ref={mainRef} className="w-full max-w-fit mx-auto h-fit flex transition flex-col justify-center items-center !z-10 gap-0">
       <p className="uppercase text-white text-[25px] transition md:text-[40px] font-[200] w-full text-left">
         El poder del
       </p>
       <div ref={headerContainerRef}>
-        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[80px] transition flex items-center text-center font-bold">
+        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[140px] transition flex items-center text-center font-bold -my-7">
             {/* Mindfulness */}
             <div ref={el => pwItemsRef.current[0] = el} className="transition" data-shift="-0.25">
               <div className="pw-letter h-image">

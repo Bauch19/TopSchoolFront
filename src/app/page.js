@@ -76,7 +76,7 @@ export default function Home() {
             priority
             quality={100}
             fetchPriority="high"
-            className="w-full md:w-3/4 lg:w-1/3 h-auto z-0 mask-img-gradient-min brightness-[0.85] px-5"
+            className="w-full md:w-3/4 lg:w-[29%] h-auto z-0 -mt-10 mask-img-gradient-min brightness-[0.85] px-5"
           />
           <Button className={'z-[1] absolute bottom-5'} onClick={() => setOpen(true)}>
             Saber más
@@ -99,21 +99,12 @@ export default function Home() {
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
         <div className="w-fit h-fit absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
-          {/* <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
-            Las mejores opiniones
-          </TextAnimation>
-          <TextAnimation className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center">
-            educativas del país
-          </TextAnimation> */}
-          <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
-          <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
+          <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
+          <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
         </div>
         <SwiperPeople />
       </section>
       <section className="bg-transparent flex flex-col justify-center gap-10 py-20 items-center">
-        {/* <TextAnimation className="uppercase text-gray-100 font-semibold text-[30px] tracking-[3px] mt-[140px] z-10 flex justify-center items-center">
-          Lo más top
-        </TextAnimation> */}
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
           <SwiperTop />
         </div>

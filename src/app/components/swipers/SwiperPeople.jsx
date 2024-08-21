@@ -19,7 +19,7 @@ export default function SwiperPeople(){
   }
 
   return(<>
-  <div className="w-full max-w-[1000px] hidden md:flex justify-between items-center px-5 absolute bottom-0">
+  <div className="w-full max-w-[1000px] flex flex-col lg:flex-row justify-between items-center px-5 absolute bottom-0">
     <People 
       src={'/people/persona-1.png'}
       name={'Dana'}
@@ -35,53 +35,6 @@ export default function SwiperPeople(){
       name={'Jordi'}
       lastName={'Soler'}
     />
-  </div>
-  <div className="w-full max-w-[1000px] px-5 absolute bottom-0 md:hidden">
-    <Control 
-      className={'right-6'}
-      direction='right'
-      onClick={() => handleNext()}
-      key={'btn-next'}
-    />
-    <Swiper
-      key={'swiper-people'}
-      ref={sliderRef}
-      spaceBetween={0}
-      slidesPerView={1}
-      loop
-      modules={[Autoplay, Pagination]}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      pagination={{ 
-        clickable: true,
-        dynamicBullets: true,
-      }}
-      className='h-fit swiperPeople'
-    >
-      <SwiperSlide key={'people-1'}>
-        <People 
-          src={'/people/persona-1.png'}
-          name={'Dana'}
-          lastName={'Stevens'}
-        />
-      </SwiperSlide>
-      <SwiperSlide key={'people-2'}>
-        <People 
-          src={'/people/persona-2.png'}
-          name={'Rebeca'}
-          lastName={'Hadid'}
-        />
-      </SwiperSlide>
-      <SwiperSlide key={'people-3'}>
-        <People 
-          src={'/people/persona-3.png'}
-          name={'Jordi'}
-          lastName={'Soler'}
-        />
-      </SwiperSlide>
-    </Swiper>
   </div>
   </>);
 }

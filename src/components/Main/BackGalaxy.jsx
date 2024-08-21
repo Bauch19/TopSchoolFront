@@ -68,12 +68,11 @@ export default function BackGalaxy(){
         <div className="wrappers w-full h-full relative py-20 z-[2]" />
     </div>
     <div className="absolute w-screen h-screen -z-[3] bg-black "/>
-    <div className="z-[2] w-screen h-fit mx-auto relative mask-img-gradient-top pt-[120px] flex flex-col gap-10 justify-center items-center bg-black xl:bg-transparent mt-[120px]">
+    <div className="z-[2] w-screen h-fit mx-auto relative mask-img-gradient-top pt-[120px] flex flex-col gap-10 justify-center items-center bg-black xl:bg-transparent mt-20">
         <TextAnimation2 
             text={'Lo más leído'} 
-            className="w-full z-[2] text-white flex uppercase font-bold tracking-[5px] text-[24px] text-center transition justify-center items-center"
+            className="w-full z-[2] text-white flex uppercase font-bold tracking-[5px] text-[30px] text-center transition justify-center items-center"
         />
-        {/* <span className="w-full z-[2] text-white uppercase font-bold tracking-[5px] text-[24px] text-center">Lo más leído</span> */}
         <div className="w-full z-[2] max-w-[1000px] px-10 h-auto mx-auto relative bg-black">
             <SwiperArticles />
         </div>
