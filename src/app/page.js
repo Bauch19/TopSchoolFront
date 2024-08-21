@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
-      <div className="w-full h-fit py-4 lg:py-10 overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat">
+      <div className="w-full h-fit py-4 lg:py-5 overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat">
         <MarqueeAnimation>
           proxima edición noviembre - diciembre <Icons.StartFill className={'size-4 lg:size-7'} /> revista digital proximamente <Icons.StartFill className={'size-4 lg:size-7'} />
         </MarqueeAnimation>
