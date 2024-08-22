@@ -16,19 +16,19 @@ export default function Footer(){
       </div>
       <div className="flex items-center gap-2">
         <LinkButton 
-          url={'https://www.instagram.com'}
+          url={'https://www.instagram.com/topschool.mag/'}
           icon={<Icons.Instagram className={'size-6'}/>}
         />
         <LinkButton 
-          url={'https://www.facebook.com'}
+          url={'https://www.facebook.com/topschoolmagazine?locale=es_LA'}
           icon={<Icons.FacebookFill className={'size-6'}/>}
         />
         <LinkButton 
-          url={'https://www.youtube.com'}
+          url={'https://www.youtube.com/@TopSchoolmag'}
           icon={<Icons.YouTubeFill className={'size-6'}/>}
         />
         <LinkButton 
-          url={'https://www.tiktok.com'}
+          url={'https://www.tiktok.com/@topschoolmx?lang=es'}
           icon={<Icons.TikTokFill className={'size-6'}/>}
         />
       </div>
@@ -53,13 +53,13 @@ export default function Footer(){
             <p>Top Guía</p>
           </div>
         </div>
-        <div className="w-fit max-w-[500px] flex flex-col justify-center gap-5 items-start">
+        <div className="w-fit lg:w-[500px] flex flex-col justify-center gap-5 items-start">
           <div className="flex gap-2 w-full items-start">
             <Icons.LocationFill className={'size-6 text-white'}/>
             <div className="flex flex-col gap-1 w-full">
               <p>5 Sur 3112,</p>
               <p>Col. Chulavista</p>
-              <p>C.P. 72420,Puebla, Pue.</p>
+              <p>C.P. 72420, Puebla, Pue.</p>
             </div>
           </div>
           <div className="flex gap-2 w-full items-start">

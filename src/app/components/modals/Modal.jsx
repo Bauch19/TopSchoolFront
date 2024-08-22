@@ -46,7 +46,7 @@ export default function Modal({ open, setOpen }) {
               El poder del <span className="text-black font-bold">Mindfulness</span> en la infancia
             </h3>
 
-            <iframe className="h-[315px] w-full rounded-b-[20px]" src="https://www.youtube.com/embed/a_hPelcPRTg?si=Jg6UpGhHq6qWPrpt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className="h-[315px] w-full rounded-b-[20px]" src="https://www.youtube.com/embed/NPiOz1l6FSM?si=g0Y7fxCU8clW_YJ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </motion.div>
         </motion.div>
       )}
