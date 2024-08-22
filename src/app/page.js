@@ -115,7 +115,9 @@ export default function Home() {
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
       <div className="w-full h-fit py-4 lg:py-5 overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat">
         <MarqueeAnimation>
-          proxima edición noviembre - diciembre <Icons.StartFill className={'size-4 lg:size-7'} /> revista digital proximamente <Icons.StartFill className={'size-4 lg:size-7'} />
+          Directorio de Colegios Puebla y Tlaxcala <Icons.StartFill className={'size-4 lg:size-7'} />
+          Directorio México <Icons.StartFill className={'size-4 lg:size-7'} />
+          Directorio de Servicios <Icons.StartFill className={'size-4 lg:size-7'} />
         </MarqueeAnimation>
       </div>
     </main>
