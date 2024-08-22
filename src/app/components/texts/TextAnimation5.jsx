@@ -51,92 +51,92 @@ export default function TextAnimation4({ ...res }){
       <span ref={parallaxWordRef} className="text-white uppercase text-[16px] lg:text-[30px] transition flex items-center text-center font-bold">
         <div ref={el => pwItemsRef.current[0] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">D</span>
+            <span className="symbol">L</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[1] = el} className="transition" data-shift="0.15">
           <div className="pw-letter h-image">
-            <span className="symbol">o</span>
+            <span className="symbol">a</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[2] = el} className="transition" data-shift="-0.3">
           <div className="pw-letter h-image">
-            <span className="symbol">n</span>
+            <span className="symbol text-transparent">_</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[3] = el} className="transition" data-shift="0">
           <div className="pw-letter h-image">
-            <span className="symbol">d</span>
+            <span className="symbol">i</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[4] = el} className="transition" data-shift="-0.35">
           <div className="pw-letter h-image">
-            <span className="symbol">e</span>
+            <span className="symbol">n</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[5] = el} className="transition" data-shift="0.15">
           <div className="pw-letter h-image">
-            <span className="symbol text-transparent">_</span>
+            <span className="symbol">f</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[6] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">E</span>
+            <span className="symbol">o</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[7] = el} className="transition" data-shift="0.15">
           <div className="pw-letter h-image">
-            <span className="symbol">n</span>
+            <span className="symbol">r</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[8] = el} className="transition" data-shift="-0.3">
           <div className="pw-letter h-image">
-            <span className="symbol">c</span>
+            <span className="symbol">m</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[9] = el} className="transition" data-shift="0">
           <div className="pw-letter h-image">
-            <span className="symbol">o</span>
+            <span className="symbol">a</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[10] = el} className="transition" data-shift="-0.35">
           <div className="pw-letter h-image">
-            <span className="symbol">n</span>
+            <span className="symbol">c</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[10] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">t</span>
+            <span className="symbol">i</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[11] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">r</span>
+            <span className="symbol">ó</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[12] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">a</span>
+            <span className="symbol">n</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[13] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">r</span>
+            <span className="symbol text-transparent">_</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[14] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol text-transparent">_</span>
+            <span className="symbol">q</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[15] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">L</span>
+            <span className="symbol">u</span>
           </div>
         </div>
         <div ref={el => pwItemsRef.current[16] = el} className="transition" data-shift="-0.25">
           <div className="pw-letter h-image">
-            <span className="symbol">a</span>
+            <span className="symbol">é</span>
           </div>
         </div>
       </span>
