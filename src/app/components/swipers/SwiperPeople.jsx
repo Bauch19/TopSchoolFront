@@ -19,21 +19,21 @@ export default function SwiperPeople(){
   }
 
   return(<>
-  <div className="w-full h-fit max-w-[1000px] flex flex-col lg:flex-row justify-between items-center px-5 lg:absolute bottom-0 mt-10 lg:mt-0">
+  <div className="w-full h-fit max-w-[1000px] flex flex-col lg:flex-row gap-2 justify-between items-center px-5 lg:absolute bottom-0 mt-10 lg:mt-0">
     <People 
       src={'/people/persona-1.png'}
-      name={'Dana'}
-      lastName={'Stevens'}
+      name={'Dr. Samuel Rangel Rodríguez'}
+      lastName={'Mitos sobre la protección de datos.'}
     />
     <People 
       src={'/people/persona-2.png'}
-      name={'Rebeca'}
-      lastName={'Hadid'}
+      name={'Ing. Israel Sánchez Martínez'}
+      lastName={'La importancia de participar e incidir en la educación de nuestros hijos'}
     />
     <People 
       src={'/people/persona-3.png'}
-      name={'Jordi'}
-      lastName={'Soler'}
+      name={'Ángel Leyva'}
+      lastName={'Las expectativas y retos de Mario Delgado frente a la SEP.'}
     />
   </div>
   </>);
