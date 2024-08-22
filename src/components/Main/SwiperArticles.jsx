@@ -75,8 +75,8 @@ export default function SwiperArticles(){
                     />
                 </div>
                 <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Rinocerontes</span>
-                <p className='uppercase text-xs'>Vive la verdadera experiencia en africam safari</p>
+                <span className='text-white uppercase font-bold py-3'>Bienestar</span>
+                <p className='uppercase text-xs'>Educar en y desde la coherencia</p>
             </SwiperSlide>
             <SwiperSlide key={'item-2'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
@@ -89,8 +89,8 @@ export default function SwiperArticles(){
                     />
                 </div>
                 <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Back to School</span>
-                <p className='uppercase text-xs'>Office Depot los mejores descuentos</p>
+                <span className='text-white uppercase font-bold py-3'>Hablemos de…</span>
+                <p className='uppercase text-xs'>Con valores se vive mejor en familia</p>
             </SwiperSlide>
             <SwiperSlide key={'item-3'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
@@ -117,8 +117,8 @@ export default function SwiperArticles(){
                     />
                 </div>
                 <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Tecnología</span>
-                <p className='uppercase text-xs'>De lo analogo a lo digital, la singularidad</p>
+                <span className='text-white uppercase font-bold py-3'>Para disfrutar</span>
+                <p className='uppercase text-xs'>Joaquin Phoenix y Lady Gaga en Joker: Folie à deux</p>
             </SwiperSlide>
             </>
         ))}
