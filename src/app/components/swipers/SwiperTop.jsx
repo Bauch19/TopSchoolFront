@@ -71,24 +71,6 @@ export default function SwiperTop(){
     >
         {arrayAux?.map((item, index) => (
             <>
-            <SwiperSlide key={'item-top-1'+index} className='text-blue-200 h-fit w-full'>
-                <Items 
-                    src={'/articulos/top-1.jpg'}
-                    alt='articulo'
-                    title={'RAFA MARQUEZ'}
-                    description={'EL LEGADO DE UN GRANDE EN MÉXICO'}
-                    key={'item-top-1'+index}
-                />
-            </SwiperSlide>
-            <SwiperSlide key={'item-top-2'+index} className='text-blue-200 h-fit w-full'>
-                <Items 
-                    src={'/articulos/top-2.jpg'}
-                    alt='articulo'
-                    title={'PALACIO DE HIERRO'}
-                    description={'LOS MEJORES RECUERDOS SON LAS AVENTURAS'}
-                    key={'item-top-2'+index}
-                />
-            </SwiperSlide>
             <SwiperSlide key={'item-top-3'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-3.jpg'}
@@ -98,12 +80,30 @@ export default function SwiperTop(){
                     key={'item-top-3'+index}
                 />
             </SwiperSlide>
+            <SwiperSlide key={'item-top-1'+index} className='text-blue-200 h-fit w-full'>
+                <Items 
+                    src={'/articulos/top-1.jpg'}
+                    alt='articulo'
+                    title={'Internacional'}
+                    description={'La educación en zonas de guerra: desafíos y esperanza en medio del conflicto'}
+                    key={'item-top-1'+index}
+                />
+            </SwiperSlide>
+            <SwiperSlide key={'item-top-2'+index} className='text-blue-200 h-fit w-full'>
+                <Items 
+                    src={'/articulos/top-2.jpg'}
+                    alt='articulo'
+                    title={'¿Sabías que…?'}
+                    description={'Datos sobre la educación en México.'}
+                    key={'item-top-2'+index}
+                />
+            </SwiperSlide>
             <SwiperSlide key={'item-top-4'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
                     src={'/articulos/top-4.jpg'}
                     alt='articulo'
-                    title={'ZAPATERIAS PAKAR'}
-                    description={'COMO ESTRENAR EN ESTE REGRESO A CLASES'}
+                    title={'Evento'}
+                    description={'Albercada en el Colegio América'}
                     key={'item-top-4'+index}
                 />
             </SwiperSlide>
