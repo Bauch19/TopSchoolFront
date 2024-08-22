@@ -5,14 +5,14 @@ import { Icons } from "@/components/Icons";
 export default function Footer(){
   return(
     <section className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] z-10 relative flex flex-col gap-5 pb-10 justify-center items-center">
-      <div className="w-full max-w-[1000px] mx-auto flex flex-col lg:flex-row gap-2 items-center lg:items-start">
-        <div className="w-fit flex flex-col justify-center items-center">
+      <div className="w-full mx-auto flex flex-col lg:flex-row gap-2 items-center lg:items-start px-5">
+        <div className="w-full flex flex-col justify-center items-center">
           <Image 
             src={'/logo-white.png'}
             width={500}
             height={100}
             priority quality={75}
-            className="w-[300px] my-10 h-auto"
+            className="w-full max-w-[500px] my-10 h-auto"
           />
           <div className="flex w-fit items-center gap-2">
             <LinkButton 
@@ -36,25 +36,25 @@ export default function Footer(){
         <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-14 lg:gap-5 text-lg py-10 px-5">
           <div className="w-full h-fit flex flex-col lg:flex-row gap-5 justify-center">
             <div className="flex flex-col gap-1 border-l border-white pl-6 px-5">
-              <strong className="font-bold text-xl uppercase">Temas</strong>
+              <strong className="font-bold text-[24px] uppercase">Temas</strong>
               <p>Cultura</p>
               <p>Tendencias</p>
               <p>Salud</p>
               <p>Bienestar</p>
-              <strong className="font-bold text-xl uppercase mt-4">Artículos</strong>
+              <strong className="font-bold text-[24px] uppercase mt-4">Artículos</strong>
               <p>Hablemos de...</p>
               <p>Nutrición</p>
               <p>Entrevista con...</p>
               <p>TI/Innovación</p>
             </div>
             <div className="flex flex-col gap-1 border-l border-white pl-6 px-5">
-              <strong className="font-bold text-xl uppercase">Seciones</strong>
+              <strong className="font-bold text-[24px] uppercase">Seciones</strong>
               <p>Ciencia Lo-K</p>
               <p>Top News</p>
               <p>Top Guía</p>
             </div>
             <div className="flex flex-col gap-1 border-l border-white pl-6 px-5">
-              <strong className="font-bold text-xl uppercase">Contacto</strong>
+              <strong className="font-bold text-[24px] uppercase">Contacto</strong>
               <div className="flex gap-2 w-full items-start">
                 <Icons.LocationFill className={'size-6 text-white'}/>
                 <div className="flex flex-col gap-1 w-full">
