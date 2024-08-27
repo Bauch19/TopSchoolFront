@@ -19,7 +19,7 @@ export default function SwiperPeople(){
   }
 
   return(<>
-  <div className="w-full h-fit max-w-[1000px] flex flex-col lg:flex-row gap-2 justify-between items-center lg:items-start px-5 lg:absolute bottom-0 mt-10 lg:mt-0">
+  <div className="w-full h-fit max-w-[1000px] flex flex-col lg:flex-row gap-2 justify-between items-center lg:items-start px-5 xl:pt-28 xl:absolute -bottom-4">
     <People 
       src={'/people/persona-1.png'}
       name={'Dr. Samuel Rangel Rodríguez'}

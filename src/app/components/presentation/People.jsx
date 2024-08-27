@@ -11,7 +11,7 @@ export default function People({src, name, lastName, ...res}){
                     className="w-full h-fit object-cover"
                 />
             </div>
-            <p className="text-white font-[200] text-[16px] lg:text-[26px] text-center">
+            <p className="text-white font-[200] text-[16px] lg:text-[20px] text-center">
                 <strong className="block font-bold">{name}</strong> {lastName}
             </p>
         </div>
