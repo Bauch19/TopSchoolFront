@@ -56,7 +56,7 @@ export default function ParalaxHome({ open, setOpen }){
   }, [containerRef]);
 
   return (<>
-    <div ref={containerRef} className="parallax-mouse h-screen overflow-hidden bg-[url(/bg-home.jpg)] !backdrop-blur-lg bg-center bg-cover w-full pt-20 md:py-20 relative hidden lg:block flex-col justify-center gap-10 items-center" onMouseMove={handleMouseMove}>
+    <div ref={containerRef} className="parallax-mouse h-screen overflow-hidden bg-[url(/bg-home.jpg)] !backdrop-blur-lg bg-center bg-cover w-full pt-20 md:py-20 relative flex-col justify-center gap-10 items-center" onMouseMove={handleMouseMove}>
       <Image 
         src={'/bg-home.jpg'}
         alt="titulo"
@@ -76,12 +76,12 @@ export default function ParalaxHome({ open, setOpen }){
           quality={75}
           className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
         />
+        <div className='flex flex-col gap-1 justify-center items-center pt-20 text-white uppercase text-[16px] lg:text-[30px] transition text-center font-bold'>
+          <p>LA INFORMACIÓN QUÉ</p>
+          <p>Te facilitará la vida</p>
+        </div>
       </div>
-      <div className='flex flex-col gap-1 justify-center items-center my-2'>
-        <TextAnimation5 />
-        <TextAnimation6 />
-      </div>
-      <div className='w-full max-w-fit mx-auto mt-7'>
+      <div className='w-full max-w-fit mx-auto mt-28'>
         <Button onClick={() => setOpen(true)} className={'!z-10'}>
           Suscribete
         </Button>
@@ -93,7 +93,7 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[500px] 2xl:max-w-[800px] px-5 h-auto z-0 parallax-element md:absolute left-1/3 -translate-x-1/3 md:-bottom-[10%]"
+        className="w-full md:w-3/4 lg:w-[35%] px-5 h-auto z-0 parallax-element md:absolute left-1/3 -translate-x-1/3 md:-bottom-[10%]"
         data-parallax-strength="200"
       />
     </div>
@@ -109,9 +109,9 @@ export default function ParalaxHome({ open, setOpen }){
           className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
         />
       </div>
-      <div className='flex flex-col gap-1 justify-center items-center my-2'>
-        <TextAnimation5 />
-        <TextAnimation6 />
+      <div className='flex flex-col gap-1 justify-center items-center my-2 text-white uppercase text-[16px] lg:text-[30px] transition text-center font-bold'>
+        <p>LA INFORMACIÓN QUÉ</p>
+        <p>Te facilitará la vida</p>
       </div>
       <div className='w-full max-w-fit mx-auto mt-7'>
         <Button onClick={() => setOpen(true)} className={'!z-10'}>
@@ -125,7 +125,7 @@ export default function ParalaxHome({ open, setOpen }){
         height={540}
         priority
         quality={100}
-        className="w-full max-w-[500px] 2xl:max-w-[800px] px-5 h-auto z-0 absolute bottom-0"
+        className="w-full md:w-3/4 lg:w-[35%] px-5 h-auto z-0 absolute left-1/2 -translate-x-1/2 bottom-0"
       />
     </div>
   </>);

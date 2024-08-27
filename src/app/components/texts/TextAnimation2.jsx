@@ -9,42 +9,42 @@ export default function TextAnimation2({ text, ...res }){
   const parallaxWordRef = useRef(null);
   const pwItemsRef = useRef([]);
 
-  useEffect(() => {
-    const winH = 200;
+  // useEffect(() => {
+  //   const winH = 200;
 
-    // Parallax word movement
-    gsap.to(parallaxWordRef.current, {
-      y: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: mainRef.current,
-        start: "top top",
-        end: `+=${winH / 100}`,
-        scrub: true,
-      },
-    }, "-=10");
+  //   // Parallax word movement
+  //   gsap.to(parallaxWordRef.current, {
+  //     y: -20,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: mainRef.current,
+  //       start: "top top",
+  //       end: `+=${winH / 100}`,
+  //       scrub: true,
+  //     },
+  //   }, "-=10");
 
-    // PwItems shift effect
-    pwItemsRef.current.forEach((item, index) => {
-      const shiftH = Math.random() * 0.6 - 0.4;
+  //   // PwItems shift effect
+  //   pwItemsRef.current.forEach((item, index) => {
+  //     const shiftH = Math.random() * 0.6 - 0.4;
 
-      gsap.fromTo(
-        item,
-        { y: shiftH * winH / 2 },
-        {
-          y: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: mainRef.current,
-            start: "center center",
-            end: `+=${200}`,
-            scrub: true,
-          },
-        },
-        "-=10"
-      );
-    });
-  }, []);
+  //     gsap.fromTo(
+  //       item,
+  //       { y: shiftH * winH / 2 },
+  //       {
+  //         y: 0,
+  //         ease: "none",
+  //         scrollTrigger: {
+  //           trigger: mainRef.current,
+  //           start: "center center",
+  //           end: `+=${200}`,
+  //           scrub: true,
+  //         },
+  //       },
+  //       "-=10"
+  //     );
+  //   });
+  // }, []);
 
   return(
     <div ref={mainRef} {...res}>

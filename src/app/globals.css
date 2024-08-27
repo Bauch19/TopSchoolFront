@@ -236,11 +236,11 @@ section {
 .parallax-mouse{
   width: 100%;
   height: 100vh;
-  display: none;
   position: relative;
   overflow: hidden;
+  display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: block;
   }
 }

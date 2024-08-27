@@ -10,18 +10,6 @@ import TextAnimation2 from '@/app/components/texts/TextAnimation2';
 export default function BackGalaxy(){
     return(<>
     <ParticlesJs id={'tsparticles'} />
-    <div className="w-full h-full fixed left-0">
-        <span class="star"></span>
-        <span class="star pink"></span>
-        <span class="star blue"></span>
-        <span class="star yellow"></span>
-    </div>
-    <div className="w-full h-full fixed -right-2/3 top-1/2">
-        <span class="star"></span>
-        <span class="star pink"></span>
-        <span class="star blue"></span>
-        <span class="star yellow"></span>
-    </div>
     <div className="w-screen h-full relative flex flex-col -z-[1] justify-center bg-black">
         <motion.div
             inital={{ translateX: '200vw' }}
