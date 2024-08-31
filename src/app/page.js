@@ -88,7 +88,7 @@ export default function Home() {
           <SwiperBanners />
         </div>
       </div>
-      <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col justify-start items-center py-20 md:py-10 xl:py-20">
+      <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col gap-20 justify-start items-center py-20 md:py-10 xl:py-20">
         <Image 
           src={'/logo-news.png'}
           alt="titulo"
@@ -98,13 +98,11 @@ export default function Home() {
           quality={100}
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
-        <div className="w-fit h-fit mt-[120px] lg:mt-0 xl:-mt-14 lg:absolute top-1/2 -translate-y-1/2 flex flex-col gap-1">
+        <div className="w-fit h-fit flex flex-col gap-1">
           <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
           <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
         </div>
         <SwiperPeople />
-      </section>
-      <section className="bg-transparent flex flex-col justify-center gap-10 py-20 items-center">
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">
           <SwiperTop />
         </div>
