@@ -52,6 +52,7 @@ export default function Home() {
       </motion.button>
     </HtmlTooltip>
     </div>
+    <video src="/videos/bg-world-2.mp4" autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] brightness-75 fixed" />
     <main className="relative z-[1] w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
@@ -88,7 +89,6 @@ export default function Home() {
         </div>
       </div>
       <section className="bg-transparent bg-center bg-cover bg-no-repeat relative flex flex-col gap-20 justify-start items-center py-20 md:py-10 xl:py-20">
-        <video src="/videos/bg-world-2.mp4" autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] brightness-75 fixed" />
         <Image 
           src={'/logo-news.png'}
           alt="titulo"
