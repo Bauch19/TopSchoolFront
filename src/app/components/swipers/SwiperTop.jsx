@@ -44,7 +44,7 @@ export default function SwiperTop(){
     <Swiper
         key={'swiper-top'}
         ref={sliderRef}
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={1}
         navigation={false}
         loop
@@ -55,15 +55,15 @@ export default function SwiperTop(){
         }}
         breakpoints={{ 
             768: {
-                spaceBetween: 50,
+                spaceBetween: 20,
                 slidesPerView: 2,
             },
             1024: {
-                spaceBetween: 50,
+                spaceBetween: 20,
                 slidesPerView: 3,
             },
             1280: {
-                spaceBetween: 50,
+                spaceBetween: 20,
                 slidesPerView: 4,
             },
         }}
@@ -82,7 +82,7 @@ export default function SwiperTop(){
             </SwiperSlide>
             <SwiperSlide key={'item-top-1'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
-                    src={'/articulos/top-1.jpg'}
+                    src={'/articulos/GUERRA.jpeg'}
                     alt='articulo'
                     title={'Internacional'}
                     description={'La educación en zonas de guerra: desafíos y esperanza en medio del conflicto'}
@@ -91,7 +91,7 @@ export default function SwiperTop(){
             </SwiperSlide>
             <SwiperSlide key={'item-top-2'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
-                    src={'/articulos/top-2.jpg'}
+                    src={'/articulos/SABIAS-K.jpeg'}
                     alt='articulo'
                     title={'¿Sabías que…?'}
                     description={'Datos sobre la educación en México.'}
@@ -100,7 +100,7 @@ export default function SwiperTop(){
             </SwiperSlide>
             <SwiperSlide key={'item-top-4'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
-                    src={'/articulos/top-4.jpg'}
+                    src={'/articulos/America.jpg'}
                     alt='articulo'
                     title={'Evento'}
                     description={'Albercada en el Colegio América'}

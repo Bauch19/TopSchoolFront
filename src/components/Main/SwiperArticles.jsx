@@ -42,21 +42,21 @@ export default function SwiperArticles(){
     <Swiper
         key={'swiper-articles'}
         ref={sliderRef}
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={1}
         navigation={false}
         loop
         breakpoints={{ 
             768: {
-                spaceBetween: 50,
+                spaceBetween: 20,
                 slidesPerView: 2,
             },
             1024: {
-                spaceBetween: 50,
+                spaceBetween: 20,
                 slidesPerView: 3,
             },
             1280: {
-                spaceBetween: 50,
+                spaceBetween: 20,
                 slidesPerView: 4,
             },
         }}
@@ -67,7 +67,7 @@ export default function SwiperArticles(){
             <SwiperSlide key={'item-1'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
-                        src={'/articulos/ARTI-02.png'}
+                        src={'/articulos/Bienestar.jpg'}
                         alt='articulo'
                         width={960}
                         height={540}
@@ -81,7 +81,7 @@ export default function SwiperArticles(){
             <SwiperSlide key={'item-2'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
-                        src={'/articulos/ARTI-03.png'}
+                        src={'/articulos/Valores.jpg'}
                         alt='articulo'
                         width={960}
                         height={540}
@@ -95,7 +95,7 @@ export default function SwiperArticles(){
             <SwiperSlide key={'item-3'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
-                        src={'/articulos/ARTI-04.png'}
+                        src={'/articulos/Entrevista.jpeg'}
                         alt='articulo'
                         width={960}
                         height={540}
@@ -109,7 +109,7 @@ export default function SwiperArticles(){
             <SwiperSlide key={'item-4'+index} className='text-white h-fit w-full !z-[3]'>
                 <div className='containerTop overflow-hidden'>
                     <Image 
-                        src={'/articulos/ARTI-05.png'}
+                        src={'/articulos/Para-disfrutar.jpg'}
                         alt='articulo'
                         width={960}
                         height={540}

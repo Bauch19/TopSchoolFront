@@ -21,17 +21,17 @@ export default function SwiperPeople(){
   return(<>
   <div className="w-full h-fit max-w-[1000px] flex flex-col lg:flex-row gap-2 justify-between items-center lg:items-start px-5 xl:pb-20">
     <People 
-      src={'/people/persona-1.png'}
+      src={'/people/Autores-Top-News-04.png'}
       name={'Dr. Samuel Rangel Rodríguez'}
       lastName={'Mitos sobre la protección de datos.'}
     />
     <People 
-      src={'/people/persona-2.png'}
+      src={'/people/Autores-Top-News-02.png'}
       name={'Ing. Israel Sánchez Martínez'}
       lastName={'La importancia de participar e incidir en la educación de nuestros hijos'}
     />
     <People 
-      src={'/people/persona-3.png'}
+      src={'/people/Autores-Top-News-01.png'}
       name={'Ángel Leyva'}
       lastName={'Las expectativas y retos de Mario Delgado frente a la SEP.'}
     />
