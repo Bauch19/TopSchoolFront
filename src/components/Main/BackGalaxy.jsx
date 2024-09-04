@@ -84,7 +84,7 @@ export default function BackGalaxy(){
             text={'Lo más leído'} 
             className="w-full z-[2] text-white flex uppercase font-bold tracking-[5px] text-[30px] text-center transition justify-center items-center"
         />
-        <div className="w-full z-[2] max-w-[1000px] px-10 h-auto mx-auto relative bg-black">
+        <div className="w-full z-[2] max-w-[1000px] lg:max-w-[60%] px-10 h-auto mx-auto relative bg-black">
             <SwiperArticles />
         </div>
     </div>

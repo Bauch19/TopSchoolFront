@@ -33,8 +33,8 @@ export default function Footer(){
             />
           </div>
         </div>
-        <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-14 lg:gap-5 text-lg py-10 px-5">
-          <div className="w-full h-fit flex flex-col lg:flex-row gap-5 justify-center">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center md:items-start gap-14 md:gap-5 text-lg py-10 px-5">
+          <div className="w-full h-fit flex flex-col md:flex-row gap-5 justify-center">
             <div className="flex flex-col gap-1 border-l border-white pl-6 px-5">
               <strong className="font-bold text-[24px] uppercase">Temas</strong>
               <p>Cultura</p>
