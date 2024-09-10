@@ -107,7 +107,7 @@ export default function Home() {
           <SwiperTop />
         </div>
         <div className="w-full max-w-[1000px] mx-auto h-fit mt-20 -mb-5 px-5 bg-transparent">
-          <SwiperBanners />
+          <SwiperBanners position={2} />
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />
