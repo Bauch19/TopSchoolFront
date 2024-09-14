@@ -10,15 +10,25 @@ import 'swiper/css/pagination';
 import Image from 'next/image';
 
 import { useRef, useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 
 export default function SwiperBanners({ position = 1 }){
-  const swiperRef = useRef(null);
+  const [swiper, setSwiper] = useState(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if(isInView){
+      swiper?.autoplay?.start();
+      console.log(swiper)
+    }
+    return () => swiper?.autoplay?.stop();
+  },[isInView]);
 
   return(
-    <>
+    <motion.div ref={ref}>
     <Swiper
-      ref={swiperRef}
+      onSwiper={setSwiper}
       key={'swiper-top'}
       direction={'vertical'}
       spaceBetween={0}
@@ -28,6 +38,7 @@ export default function SwiperBanners({ position = 1 }){
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
+        waitForTransition: false,
       }}
       pagination={{ 
         clickable: true,
@@ -60,15 +71,18 @@ export default function SwiperBanners({ position = 1 }){
         />
       </SwiperSlide>
       )}
-      {/* <SwiperSlide key={'banner-3'} className='bg-[#F4D7D3]'>
+      <SwiperSlide key={'banner-3'} className='bg-transparent'>
         <Image 
-          src={'/banners/banner-3.jpg'}
+          src={'/banners/A-Banner VP_2.gif'}
+          alt='banner 1'
           width={2000}
           height={538}
-          className=" w-full h-[170px] object-contain"
+          unoptimized={true}
+          priority={true}
+          className=" w-full h-[170px] object-cover"
         />
-      </SwiperSlide> */}
+      </SwiperSlide>
     </Swiper>
-    </>
+    </motion.div>
   )
 }
