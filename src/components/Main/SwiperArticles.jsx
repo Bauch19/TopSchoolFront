@@ -65,60 +65,40 @@ export default function SwiperArticles(){
         {arrayAux?.map((item, index) => (
             <>
             <SwiperSlide key={'item-1'+index} className='text-white h-fit w-full !z-[3]'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/Bienestar.jpg'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Bienestar</span>
-                <p className='uppercase text-xs'>Educar en y desde la coherencia</p>
+                <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=15'}
+                    src={'/articulos/Bienestar.jpg'}
+                    alt={'articulo'}
+                    title={'Bienestar'}
+                    description={'Educar en y desde la coherencia'}
+                />
             </SwiperSlide>
             <SwiperSlide key={'item-2'+index} className='text-white h-fit w-full !z-[3]'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/Valores.jpg'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Hablemos de…</span>
-                <p className='uppercase text-xs'>Con valores se vive mejor en familia</p>
+                <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=17'}
+                    src={'/articulos/Valores.jpg'}
+                    alt={'articulo'}
+                    title={'Hablemos de...'}
+                    description={'Con valores se vive mejor en familia'}
+                />
             </SwiperSlide>
             <SwiperSlide key={'item-3'+index} className='text-white h-fit w-full !z-[3]'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/Entrevista.jpeg'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Entrevista con ...</span>
-                <p className='uppercase text-xs'>Cristian Carabias libre como el viento</p>
+                <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=46'}
+                    src={'/articulos/Entrevista.jpeg'}
+                    alt={'articulo'}
+                    title={'Entrevista con ...'}
+                    description={'Cristian Carabias libre como el viento'}
+                />
             </SwiperSlide>
             <SwiperSlide key={'item-4'+index} className='text-white h-fit w-full !z-[3]'>
-                <div className='containerTop overflow-hidden'>
-                    <Image 
-                        src={'/articulos/Para-disfrutar.jpg'}
-                        alt='articulo'
-                        width={960}
-                        height={540}
-                        className='object-cover w-full h-full'
-                    />
-                </div>
-                <div className='h-10'></div>
-                <span className='text-white uppercase font-bold py-3'>Para disfrutar</span>
-                <p className='uppercase text-xs'>Joaquin Phoenix y Lady Gaga en Joker: Folie à deux</p>
+                <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=10'}
+                    src={'/articulos/Para-disfrutar.jpg'}
+                    alt={'articulo'}
+                    title={'Para disfrutar'}
+                    description={'Joaquin Phoenix y Lady Gaga en Joker: Folie à deux'}
+                />
             </SwiperSlide>
             </>
         ))}
@@ -126,6 +106,27 @@ export default function SwiperArticles(){
     </>
     )
 };
+
+function Items({ src, alt, title, description, href, ...res }){
+    return(
+    <a href={href} target='_blank' {...res}>
+        <div className='containerTop overflow-hidden'>
+            <Image 
+                src={src}
+                alt={alt}
+                width={960}
+                height={540}
+                unoptimized
+                priority
+                className='object-cover w-full h-full'
+            />
+        </div>
+        <div className='h-10'></div>
+        <span className='text-gray-200 uppercase font-bold py-3'>{title}</span>
+        <p className='uppercase text-xs'>{description}</p>
+    </a>
+    )
+}
 
 function Control({ direction = 'left', className, ...res }){
     return(

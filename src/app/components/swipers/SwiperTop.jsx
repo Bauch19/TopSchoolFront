@@ -114,21 +114,21 @@ export default function SwiperTop(){
     )
 };
 
-function Items({ src, alt, title, description, ...res }){
+function Items({ src, alt, title, description, href, ...res }){
     return(
     <div {...res}>
-    <div className='containerTop overflow-hidden'>
-        <Image 
-            src={src}
-            alt={alt}
-            width={960}
-            height={540}
-            className='object-cover w-full h-full'
-        />
-    </div>
-    <div className='h-5'></div>
-    <span className='text-gray-200 uppercase font-bold py-3'>{title}</span>
-    <p className='uppercase text-xs'>{description}</p>
+        <div className='containerTop overflow-hidden'>
+            <Image 
+                src={src}
+                alt={alt}
+                width={960}
+                height={540}
+                className='object-cover w-full h-full'
+            />
+        </div>
+        <div className='h-5'></div>
+        <span className='text-gray-200 uppercase font-bold py-3'>{title}</span>
+        <p className='uppercase text-xs'>{description}</p>
     </div>
     )
 }

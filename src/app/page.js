@@ -47,9 +47,9 @@ export default function Home() {
       </motion.button>
     </HtmlTooltip>
     <HtmlTooltip arrow placement="top-start" title={<div className="text-xl">Leer revista</div>}>
-      <motion.button whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+      <motion.a href="https://online.fliphtml5.com/fdeoj/wmrr/#p=1" target="_blank" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
         <Icons.Notebook className={'size-7 md:size-10 text-white'} />
-      </motion.button>
+      </motion.a>
     </HtmlTooltip>
     </div>
     <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] scale-x-[-1] brightness-75 fixed" />
