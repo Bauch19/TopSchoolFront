@@ -139,7 +139,7 @@ export default function Home() {
       <div className="w-full h-fit py-4 lg:py-5 overflow-hidden relative bg-gold bg-cover bg-center bg-no-repeat">
         <MarqueeAnimation>
           Directorio de Colegios Puebla y Tlaxcala <Icons.StartFill className={'size-4 lg:size-7'} />
-          Directorio México <Icons.StartFill className={'size-4 lg:size-7'} />
+          Directorio médico <Icons.StartFill className={'size-4 lg:size-7'} />
           Directorio de Servicios <Icons.StartFill className={'size-4 lg:size-7'} />
         </MarqueeAnimation>
       </div>
