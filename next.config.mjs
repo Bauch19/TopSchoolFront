@@ -10,6 +10,7 @@ const nextConfig = {
         config.resolve.alias['@'] = path.resolve(__dirname, 'src');
         return config;
     },
+    // output: 'export',
 };
 
 export default nextConfig;

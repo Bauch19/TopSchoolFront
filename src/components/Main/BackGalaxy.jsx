@@ -29,6 +29,7 @@ export default function BackGalaxy(){
                     width={1920}
                     height={1080}
                     priority
+                    unoptimized
                     quality={100}
                     fetchPriority="high"
                     className="opacity-100 -z-[1] left-0 mask-img-gradient bg-black"
@@ -39,6 +40,7 @@ export default function BackGalaxy(){
                     width={1920}
                     height={1080}
                     priority
+                    unoptimized
                     quality={100}
                     fetchPriority="high"
                     className="opacity-100 -z-[1] right-0 scale-x-[-1] mask-img-gradient bg-black"
@@ -49,6 +51,7 @@ export default function BackGalaxy(){
                     width={1920}
                     height={1080}
                     priority
+                    unoptimized
                     quality={100}
                     fetchPriority="high"
                     className="opacity-100 -z-[1] right-0 mask-img-gradient bg-black"
@@ -59,6 +62,7 @@ export default function BackGalaxy(){
                     width={1920}
                     height={1080}
                     priority
+                    unoptimized
                     quality={100}
                     fetchPriority="high"
                     className="opacity-100 -z-[1] right-0 scale-x-[-1] mask-img-gradient bg-black"
@@ -71,6 +75,7 @@ export default function BackGalaxy(){
             width={1920}
             height={1080}
             priority
+            unoptimized
             quality={100}
             fetchPriority="high"
             className="w-full h-[120vh] absolute top-0 mask-img-gradient bg-black -z-[1] object-cover object-center lg:hidden"

@@ -12,6 +12,7 @@ export default function Footer(){
             width={500}
             height={100}
             priority quality={75}
+            unoptimized
             className="w-full max-w-[500px] my-10 h-auto"
           />
           <div className="flex w-fit items-center gap-2">

@@ -127,6 +127,8 @@ function Items({ src, alt, title, description, href, ...res }){
                 alt={alt}
                 width={960}
                 height={540}
+                priority
+                unoptimized
                 className='object-cover w-full h-full'
             />
         </div>

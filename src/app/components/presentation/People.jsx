@@ -8,6 +8,8 @@ export default function People({src, name, lastName, ...res}){
                     src={src}
                     width={200}
                     height={307}
+                    priority
+                    unoptimized
                     className="w-full h-fit object-cover"
                 />
             </div>

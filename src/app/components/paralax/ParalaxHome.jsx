@@ -62,6 +62,7 @@ export default function ParalaxHome({ open, setOpen }){
         alt="titulo"
         fill
         priority
+        unoptimized
         quality={100}
         className="w-full h-full z-0 parallax-element object-cover object-center"
         data-parallax-strength="50"
@@ -73,6 +74,7 @@ export default function ParalaxHome({ open, setOpen }){
           width={960}
           height={540}
           priority
+          unoptimized
           quality={75}
           className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
         />
@@ -92,6 +94,7 @@ export default function ParalaxHome({ open, setOpen }){
         width={960}
         height={540}
         priority
+        unoptimized
         quality={100}
         className="w-full md:w-3/4 lg:w-[35%] px-5 h-auto z-0 parallax-element md:absolute left-1/3 -translate-x-1/3 md:-bottom-[10%]"
         data-parallax-strength="200"
@@ -105,6 +108,7 @@ export default function ParalaxHome({ open, setOpen }){
           width={960}
           height={540}
           priority
+          unoptimized
           quality={75}
           className="w-full max-w-[700px] mx-auto px-5 h-auto z-[10] -top-20 left-1/2 -translate-x-1/2 absolute"
         />
@@ -124,6 +128,7 @@ export default function ParalaxHome({ open, setOpen }){
         width={960}
         height={540}
         priority
+        unoptimized
         quality={100}
         className="w-full md:w-3/4 lg:w-[35%] px-5 h-auto z-0 absolute left-1/2 -translate-x-1/2 bottom-0"
       />
