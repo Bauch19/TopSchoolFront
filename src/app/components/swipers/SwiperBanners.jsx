@@ -82,6 +82,17 @@ export default function SwiperBanners({ position = 1 }){
           className=" w-full h-[170px] object-cover"
         />
       </SwiperSlide>
+      <SwiperSlide key={'banner-4'} className='bg-transparent'>
+        <Image 
+          src={'/banners/Banner.jpg'}
+          alt='banner 1'
+          width={2000}
+          height={538}
+          unoptimized={true}
+          priority={true}
+          className=" w-full h-[170px] object-cover"
+        />
+      </SwiperSlide>
     </Swiper>
     </motion.div>
   )

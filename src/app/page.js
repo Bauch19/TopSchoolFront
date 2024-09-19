@@ -5,7 +5,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { styled } from '@mui/material/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useTransform, useScroll, useSpring, MotionValue } from "framer-motion";
 import { Icons } from "@/components/Icons";
 import { useState, useRef } from "react";
 const BackGalaxy = dynamic(() => import('@/components/Main/BackGalaxy'));
@@ -37,6 +37,9 @@ const HtmlTooltip = styled(({ className, ...props }) => (
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [openContact, setOpenContact] = useState(false);
+  const newSection = useRef(null);
+  const { scrollYProgress } = useScroll({ target: newSection });
+  const y = useTransform(scrollYProgress, [0, 1], ["-50%", "50%"]);
 
   return (
     <>
@@ -52,7 +55,6 @@ export default function Home() {
       </motion.a>
     </HtmlTooltip>
     </div>
-    <video src="/videos/vecteezy_world-map-and-globe_46294190.mov" autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] scale-x-[-1] brightness-75 fixed" />
     <main className="relative z-[1] w-[100vw] overflow-x-hidden bg-transparent">
       <BackGalaxy />
       <div className="absolute top-0 !z-[3] bg-transparent w-full h-screen">
@@ -88,7 +90,30 @@ export default function Home() {
           <SwiperBanners />
         </div>
       </div>
-      <section className="bg-transparent !z-[5] bg-center bg-cover bg-no-repeat relative flex flex-col gap-20 justify-start items-center py-20 md:py-10 xl:py-20">
+      <section ref={newSection} className="bg-transparent bg-center bg-cover bg-no-repeat relative flex flex-col gap-20 justify-start items-center py-20 md:py-10 xl:py-20">
+        <motion.div
+          style={{
+            position: "absolute",
+            top: "50%",
+            translateY: "-50%",
+            y,
+            width: "100vw",
+            height: "100vh",
+            overflow: "hidden",
+            zIndex: -1,
+          }}
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          >
+            <source src="/videos/bg-world-2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
+        {/* <video  autoPlay loop muted playsInline className="w-screen h-screen object-cover object-center -z-[3] brightness-75 absolute top-0" /> */}
         <Image 
           src={'/logo-news.png'}
           alt="titulo"
@@ -107,7 +132,7 @@ export default function Home() {
           <SwiperTop />
         </div>
         <div className="w-full max-w-[1000px] mx-auto h-fit mt-20 -mb-5 px-5 bg-transparent">
-          <SwiperBanners position={2} />
+          <SwiperBanners />
         </div>
       </section>
       <ParalaxHome open={openContact} setOpen={setOpenContact} />

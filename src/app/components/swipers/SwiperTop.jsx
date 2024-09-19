@@ -73,6 +73,7 @@ export default function SwiperTop(){
             <>
             <SwiperSlide key={'item-top-3'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=60'}
                     src={'/articulos/top-3.jpg'}
                     alt='articulo'
                     title={'ROGER FEDERER'}
@@ -82,6 +83,7 @@ export default function SwiperTop(){
             </SwiperSlide>
             <SwiperSlide key={'item-top-1'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=58'}
                     src={'/articulos/GUERRA.jpeg'}
                     alt='articulo'
                     title={'Internacional'}
@@ -91,6 +93,7 @@ export default function SwiperTop(){
             </SwiperSlide>
             <SwiperSlide key={'item-top-2'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=55'}
                     src={'/articulos/SABIAS-K.jpeg'}
                     alt='articulo'
                     title={'¿Sabías que…?'}
@@ -100,6 +103,7 @@ export default function SwiperTop(){
             </SwiperSlide>
             <SwiperSlide key={'item-top-4'+index} className='text-blue-200 h-fit w-full'>
                 <Items 
+                    href={'https://online.fliphtml5.com/fdeoj/wmrr/#p=62'}
                     src={'/articulos/America.jpg'}
                     alt='articulo'
                     title={'Evento'}
@@ -116,7 +120,7 @@ export default function SwiperTop(){
 
 function Items({ src, alt, title, description, href, ...res }){
     return(
-    <div {...res}>
+    <a href={href} target='_blank' {...res}>
         <div className='containerTop overflow-hidden'>
             <Image 
                 src={src}
@@ -129,7 +133,7 @@ function Items({ src, alt, title, description, href, ...res }){
         <div className='h-5'></div>
         <span className='text-gray-200 uppercase font-bold py-3'>{title}</span>
         <p className='uppercase text-xs'>{description}</p>
-    </div>
+    </a>
     )
 }
 
