@@ -65,6 +65,7 @@ export default function Home() {
             width={960}
             height={540}
             priority
+            unoptimized
             quality={100}
             fetchPriority="high"
             className="w-full max-w-[300px] h-auto !z-[3]"
@@ -76,6 +77,7 @@ export default function Home() {
             width={960}
             height={540}
             priority
+            unoptimized
             quality={100}
             fetchPriority="high"
             className="w-full md:w-3/4 lg:w-[29%] h-auto z-0 lg:-mt-10 mask-img-gradient-min brightness-[0.85] px-5"
@@ -120,6 +122,7 @@ export default function Home() {
           width={960}
           height={540}
           priority
+          unoptimized
           quality={100}
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
