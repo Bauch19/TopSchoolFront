@@ -4,7 +4,7 @@ import { Icons } from "@/components/Icons";
 
 export default function Footer(){
   return(
-    <section className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] z-10 relative flex flex-col gap-5 pb-10 justify-center items-center">
+    <footer className="bg-gradient-to-bl !min-h-fit from-[#002349] to-[#00a9e9] z-10 relative flex flex-col gap-5 pb-10 justify-center items-center">
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-2 items-center lg:items-start px-5">
         <div className="w-full flex flex-col justify-center items-center">
           <Image 
@@ -78,7 +78,7 @@ export default function Footer(){
       <p className="text-white text-xs w-full text-center max-w-[1000px] mx-auto px-5">
         © 2024 TOP SCHOOL, LLC. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Service, Privacy Policy (Your Privacy Rights) and Do Not Sell or Share My Personal Information. TOP SCHOOL may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.
       </p>
-    </section>
+    </footer>
   )
 }
 
