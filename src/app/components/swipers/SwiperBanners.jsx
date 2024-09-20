@@ -44,7 +44,7 @@ export default function SwiperBanners({ position = 1 }){
         clickable: true,
         dynamicBullets: true,
       }}
-      className='h-[170px] swiperBanner bg-black'
+      className='h-[80px] lg:h-[170px] swiperBanner bg-black'
     >
       {position == 1 ? (
       <SwiperSlide key={'banner-1'}>
@@ -55,7 +55,7 @@ export default function SwiperBanners({ position = 1 }){
           height={538}
           unoptimized={true}
           priority={true}
-          className=" w-full h-[170px] object-cover"
+          className=" w-full h-auto lg:h-[170px] object-cover"
         />
       </SwiperSlide>
       ):(
@@ -67,7 +67,7 @@ export default function SwiperBanners({ position = 1 }){
           height={538}
           unoptimized={true}
           priority={true}
-          className=" w-full h-[170px] object-contain"
+          className=" w-full h-auto lg:h-[170px] object-contain"
         />
       </SwiperSlide>
       )}
@@ -79,7 +79,7 @@ export default function SwiperBanners({ position = 1 }){
           height={538}
           unoptimized={true}
           priority={true}
-          className=" w-full h-[170px] object-cover"
+          className=" w-full h-auto lg:h-[170px] object-cover"
         />
       </SwiperSlide>
       <SwiperSlide key={'banner-4'} className='bg-transparent'>
@@ -90,7 +90,7 @@ export default function SwiperBanners({ position = 1 }){
           height={538}
           unoptimized={true}
           priority={true}
-          className=" w-full h-[170px] object-cover"
+          className=" w-full h-auto lg:h-[170px] object-cover"
         />
       </SwiperSlide>
     </Swiper>
