@@ -1,4 +1,3 @@
-"use serve"
 import NestedLayout from "@/components/nested-layout";
 import { Poppins } from "next/font/google";
 import Head from "next/head";
@@ -11,7 +10,7 @@ const poppins = Poppins({
   weight: ['100','200','300','400','500','600','700','800','900'],
 });
 
-const metadata = {
+export const metadata = {
   title: "TopSchool",
   description: "TopSchool primer medio de comunicación escolar",
 };
@@ -20,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="shortcut icon" href="/vercel.svg" />
+        <link rel="shortcut icon" href="/next.svg" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
