@@ -37,7 +37,7 @@ export default function SwiperBanners({ position = 1 }){
       modules={[Autoplay, Pagination]}
       autoplay={{
         delay: 2500,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
         waitForTransition: false,
       }}
       pagination={{ 
