@@ -34,12 +34,14 @@ export default function SwiperTop(){
         direction='left'
         onClick={() => handlePrev()}
         key={'btn-prev'}
+        ariaLabel="anterior"
     />
     <Control 
         className={'right-0 xl:-right-10'}
         direction='right'
         onClick={() => handleNext()}
         key={'btn-next'}
+        ariaLabel="siguiente"
     />
     <Swiper
         key={'swiper-top'}
@@ -139,12 +141,14 @@ function Items({ src, alt, title, description, href, ...res }){
     )
 }
 
-function Control({ direction = 'left', className, ...res }){
+function Control({ direction = 'left', className, ariaLabel, ...res }){
     return(
         <AnimatePresence>
             <motion.button 
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.85 }}
+                aria-label={ariaLabel}
+                aria-labelledby={ariaLabel}
                 className={`absolute w-10 h-10 top-[40%] rounded-full bg-gray-900 bg-opacity-[0.2] backdrop-blur-sm flex justify-center items-center text-gray-200 z-10 border border-gray-200 ${className}`} {...res}
             >
                 {direction == 'left' ? (

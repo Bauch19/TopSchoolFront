@@ -20,18 +20,22 @@ export default function Footer(){
             <LinkButton 
               url={'https://www.instagram.com/topschool.mag/'}
               icon={<Icons.Instagram className={'size-6'}/>}
+              arialLabel="Instagram"
             />
             <LinkButton 
               url={'https://www.facebook.com/topschoolmagazine?locale=es_LA'}
               icon={<Icons.FacebookFill className={'size-6'}/>}
+              arialLabel="Facebook"
             />
             <LinkButton 
               url={'https://www.youtube.com/@TopSchoolmag'}
               icon={<Icons.YouTubeFill className={'size-6'}/>}
+              arialLabel="YouTube"
             />
             <LinkButton 
               url={'https://www.tiktok.com/@topschoolmx?lang=es'}
               icon={<Icons.TikTokFill className={'size-6'}/>}
+              arialLabel="TikTok"
             />
           </div>
         </div>
@@ -82,9 +86,11 @@ export default function Footer(){
   )
 }
 
-function LinkButton({  url, icon, ...res }){
+function LinkButton({  url, icon, arialLabel, ...res }){
   return(
     <motion.button
+      aria-label={arialLabel}
+      aria-labelledby={arialLabel}
       className="flex justify-center items-center p-2 rounded-full text-white hover:text-[#00a9e9] transition-all bg-opacity-50 hover:bg-[#002349] hover:backdrop-blur-lg"
       onClick={() => {
         window.open(

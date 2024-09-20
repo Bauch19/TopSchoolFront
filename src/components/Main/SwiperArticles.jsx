@@ -32,11 +32,13 @@ export default function SwiperArticles(){
     <Control 
         className={'left-0 xl:-left-10'}
         direction='left'
+        arialLabel={'anterior'}
         onClick={() => handlePrev()}
     />
     <Control 
         className={'right-0 xl:-right-10'}
         direction='right'
+        arialLabel={'siguiente'}
         onClick={() => handleNext()}
     />
     <Swiper
@@ -128,12 +130,14 @@ function Items({ src, alt, title, description, href, ...res }){
     )
 }
 
-function Control({ direction = 'left', className, ...res }){
+function Control({ direction = 'left', className, arialLabel, ...res }){
     return(
         <AnimatePresence>
             <motion.button 
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.85 }}
+                aria-label={arialLabel}
+                aria-labelledby={arialLabel}
                 className={`absolute w-10 h-10 top-[40%] rounded-full flex justify-center items-center z-10 bg-gray-500 bg-opacity-50 backdrop-blur-lg ${className}`} {...res}
             >
                 {direction == 'left' ? (

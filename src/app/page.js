@@ -45,12 +45,12 @@ export default function Home() {
     <>
     <div className="w-fit h-fit z-50 fixed right-4 bottom-4 flex flex-col gap-5">
     <HtmlTooltip arrow placement="top-start" title={<div className="text-xl">Suscribete</div>}>
-      <motion.button onClick={() => setOpenContact(true)} whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+      <motion.button onClick={() => setOpenContact(true)} whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} aria-label="Suscribete" aria-labelledby="Suscribete" className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
         <Icons.Notification className={'size-7 md:size-10 text-white'} />
       </motion.button>
     </HtmlTooltip>
     <HtmlTooltip arrow placement="top-start" title={<div className="text-xl">Leer revista</div>}>
-      <motion.a href="https://online.fliphtml5.com/fdeoj/wmrr/#p=1" target="_blank" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
+      <motion.a href="https://online.fliphtml5.com/fdeoj/wmrr/#p=1" target="_blank" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.85 }} aria-label="revista" aria-labelledby="revista" className={'p-2 md:p-5 text-white rounded-full bg-black bg-opacity-25 backdrop-blur-sm border '}>
         <Icons.Notebook className={'size-7 md:size-10 text-white'} />
       </motion.a>
     </HtmlTooltip>
