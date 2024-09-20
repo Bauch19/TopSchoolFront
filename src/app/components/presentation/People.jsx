@@ -6,6 +6,7 @@ export default function People({src, name, lastName, ...res}){
             <div className="rounded-full w-[300px] h-[300px] overflow-hidden">
                 <Image 
                     src={src}
+                    alt="people"
                     width={200}
                     height={307}
                     priority

@@ -9,6 +9,7 @@ export default function Footer(){
         <div className="w-full flex flex-col justify-center items-center">
           <Image 
             src={'/logo-white.png'}
+            alt="logo footer"
             width={500}
             height={100}
             priority quality={75}
