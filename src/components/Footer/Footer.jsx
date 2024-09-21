@@ -72,7 +72,7 @@ export default function Footer(){
               <div className="flex gap-2 w-full items-start">
                 <Icons.EmailFill className={'size-6 text-white'}/>
                 <div className="flex flex-col gap-1 w-full">
-                  <a href="mailto:hola@topschool.mx">hola@topschool.mx</a>
+                  <a href="mailto:contacto@topschool.mx">contacto@topschool.mx</a>
                 </div>
               </div>
             </div>

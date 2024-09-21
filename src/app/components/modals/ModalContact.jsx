@@ -1,12 +1,43 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Icons } from "@/components/Icons";
 import Button from "../buttons/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function ModalContact({ open, setOpen }) {
+  const [state, handleSubmit] = useForm("mnnakvrb");
+  const [loading, setLoading] = useState(false);
+  const [msgError, setMsgError] = useState("");
+  const [msgSuccess, setMsgSuccess] = useState("");
   const [form, setForm] = useState({
     email: '',
   });
+
+  const handleValidation = () => {
+    const regex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
+    if(!regex.test(form.email)){
+      setMsgError("El correo no tiene el formato correcto");
+    }else{
+      setMsgError("");
+      // handleSubmit();
+    }
+  }
+
+  useEffect(() => {
+    if(state){
+      if(state.succeeded){
+        setMsgError("");
+        setMsgSuccess("El correo se registro exitosamente");
+        setLoading(false);
+        setTimeout(() => {
+          setMsgSuccess("");
+          setForm({ email: '' });
+          setOpen(false);
+        }, [3500]);
+        setLoading(false);
+      }
+    }
+  }, [state]);
 
   return (
     <AnimatePresence>
@@ -52,7 +83,7 @@ export default function ModalContact({ open, setOpen }) {
               ¿Te gustaría suscribirte a la revista?
             </h3>
 
-            <div className="w-full h-[24px] flex justify-center gap-2 items-center">
+            <form onSubmit={handleSubmit} className="w-full h-[24px] flex justify-center gap-2 items-center">
               <input 
                 type="email" 
                 id="email"
@@ -62,10 +93,20 @@ export default function ModalContact({ open, setOpen }) {
                 onChange={(e) => setForm({...form, email: e.target.value})}
                 className="w-full max-w-[1000px] placeholder:text-gray-600 text-[14px] text-gray-900 h-full bg-transparent border-b border-gray-500" 
               />
-              <Button onClick={() => setForm({ email: '' })} className={'!border-black !bg-transparent !text-black'}>
+              <Button
+                type="submit"
+                onClick={() => handleValidation()}
+                className={'!border-black !bg-transparent !text-black'}>
                 Enviar
               </Button>
-            </div>
+            </form>
+
+            {msgError !== "" && (
+              <span className="absolute -bottom-6 text-sm bg-red-500 px-2 py-0.5 rounded-full w-fit">{msgError}</span>
+            )}
+            {msgSuccess !== "" && (
+              <span className="absolute -bottom-6 text-sm bg-green-500 px-2 py-0.5 rounded-full w-fit">{msgSuccess}</span>
+            )}
 
           </motion.div>
         </motion.div>
