@@ -126,9 +126,12 @@ export default function Home() {
           quality={100}
           className="w-full max-w-[300px] md:max-w-[600px] lg:max-w-[700px] h-auto z-[1]"
         />
-        <div className="w-fit h-fit flex flex-col gap-1">
-          <TextAnimation3 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
-          <TextAnimation4 className="text-white uppercase text-xl font-semibold tracking-[5px] text-[30px] z-[6] text-center w-full h-auto flex justify-center items-center"/>
+        <div >
+          
+        </div>
+        <div className='flex flex-col gap-1 justify-center items-center text-white uppercase text-[16px] lg:text-[30px] transition text-center font-bold'>
+          <p>Las Mejores opiniones</p>
+          <p>Educativas del país</p>
         </div>
         <SwiperPeople />
         <div className="w-full max-w-[1000px] h-auto px-12 xl:px-10 mx-auto relative">

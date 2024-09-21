@@ -53,66 +53,9 @@ const ParallaxText = () => {
       <p className="uppercase text-white text-[25px] transition md:text-[40px] font-[200] w-full text-left">
         El poder del
       </p>
-      <div ref={headerContainerRef}>
-        <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[100px] lg:text-[140px] transition flex items-center text-center font-bold lg:-my-7">
-            {/* Mindfulness */}
-            <div ref={el => pwItemsRef.current[0] = el} className="transition" data-shift="-0.25">
-              <div className="pw-letter h-image">
-                <span className="symbol">M</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[1] = el} className="transition" data-shift="0.15">
-              <div className="pw-letter h-image">
-                <span className="symbol">i</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[2] = el} className="transition" data-shift="-0.3">
-              <div className="pw-letter h-image">
-                <span className="symbol">n</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[3] = el} className="transition" data-shift="0">
-              <div className="pw-letter h-image">
-                <span className="symbol">d</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[4] = el} className="transition" data-shift="-0.35">
-              <div className="pw-letter h-image">
-                <span className="symbol">f</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[5] = el} className="transition" data-shift="0.15">
-              <div className="pw-letter h-image">
-                <span className="symbol">u</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[6] = el} className="transition" data-shift="-0.25">
-              <div className="pw-letter h-image">
-                <span className="symbol">l</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[7] = el} className="transition" data-shift="0.15">
-              <div className="pw-letter h-image">
-                <span className="symbol">n</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[8] = el} className="transition" data-shift="-0.3">
-              <div className="pw-letter h-image">
-                <span className="symbol">e</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[9] = el} className="transition" data-shift="0">
-              <div className="pw-letter h-image">
-                <span className="symbol">s</span>
-              </div>
-            </div>
-            <div ref={el => pwItemsRef.current[10] = el} className="transition" data-shift="-0.35">
-              <div className="pw-letter h-image">
-                <span className="symbol">s</span>
-              </div>
-            </div>
-        </span>
-      </div>
+      <span ref={parallaxWordRef} className="text-white uppercase text-[45px] md:text-[100px] lg:text-[140px] transition flex items-center text-center font-bold lg:-my-7">
+        MINDFULNESS
+      </span>
       <p ref={tercerRef} className="uppercase text-white text-[25px] transition md:text-[40px] font-[200] w-full text-right">
         en la infancia
       </p>
